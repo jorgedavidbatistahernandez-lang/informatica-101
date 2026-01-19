@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Informática-101</title>
+<title>Informática--101</title>
 
 <style>
 /* =======================
@@ -190,7 +190,7 @@ tr:hover {
     inset: 0;
     background: rgba(0,0,0,0.6);
     z-index: 2000;
-    overflow-y: auto; /* Permite scroll vertical en móviles */
+    overflow-y: auto; /* scroll vertical si pantalla pequeña */
 }
 
 .modal-content {
@@ -201,17 +201,16 @@ tr:hover {
     padding: 30px;
     border-radius: 12px;
     font-size: 2em;
-    overflow-x: auto; /* Scroll horizontal para tablas */
 }
 
 .modal-content table {
     width: 100%;
-    display: block; /* Permite scroll horizontal */
-    overflow-x: auto;
+    border-collapse: collapse;
 }
 
 .modal-content table th, .modal-content table td {
-    white-space: nowrap; /* Evita que las columnas se rompan */
+    padding: 8px 6px;
+    font-size: 1.6em;
 }
 
 .close {
@@ -245,61 +244,69 @@ footer {
    RESPONSIVE MÓVIL
 ======================= */
 @media (max-width: 600px) {
-    header h1 {
-        font-size: 5em;
-    }
-    header p {
-        font-size: 3.5em;
-    }
-    nav {
-        flex-direction: column;
-        gap: 20px;
-    }
-    nav a {
-        font-size: 3em;
-    }
-    section {
-        padding: 25px 3%;
-    }
-    section h2 {
-        font-size: 4em;
-    }
-    .card {
-        padding: 30px 15px;
-    }
-    .card p {
-        font-size: 3em;
-        line-height: 1.4;
-    }
-    .unidad h3 {
-        font-size: 3em;
-    }
-    .unidad p {
-        font-size: 2.5em;
-    }
-    .flecha {
-        font-size: 3.5em;
-    }
-    table th, table td {
-        font-size: 2.2em;
-    }
+
+    header h1 { font-size: 5em; }
+    header p { font-size: 3.5em; }
+    nav { flex-direction: column; gap: 20px; }
+    nav a { font-size: 3em; }
+    section { padding: 25px 3%; }
+    section h2 { font-size: 4em; }
+    .card { padding: 30px 15px; }
+    .card p { font-size: 3em; line-height: 1.4; }
+    .unidad h3 { font-size: 3em; }
+    .unidad p { font-size: 2.5em; }
+    .flecha { font-size: 3.5em; }
+    table th, table td { font-size: 2.2em; }
+    .buscador { font-size: 2.5em; padding: 12px; }
+
+    /* ===== MODAL RESPONSIVE ===== */
     .modal-content {
-        font-size: 2.5em;
-        padding: 25px;
         width: 100%;
         margin: 3% auto;
+        padding: 20px;
+        font-size: 2em;
     }
-    .modal-content table {
+
+    .modal-content table, .modal-content thead, .modal-content tbody, 
+    .modal-content th, .modal-content td, .modal-content tr {
         display: block;
-        overflow-x: auto;
+        width: 100%;
     }
-    .modal-content table th, .modal-content table td {
+
+    .modal-content thead {
+        display: none; /* Oculta encabezados en móvil */
+    }
+
+    .modal-content tr {
+        margin-bottom: 20px;
+        background: #f9f9f9;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .modal-content td {
+        text-align: left;
+        font-size: 1.8em;
+        padding: 6px 10px;
+        position: relative;
+        padding-left: 50%;
+        white-space: normal;
+    }
+
+    .modal-content td::before {
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
         white-space: nowrap;
+        font-weight: bold;
     }
-    .buscador {
-        font-size: 2.5em;
-        padding: 12px;
-    }
+
+    /* Etiquetas para cada columna */
+    .modal-content td:nth-of-type(1)::before { content: "Evaluación"; }
+    .modal-content td:nth-of-type(2)::before { content: "Fecha"; }
+    .modal-content td:nth-of-type(3)::before { content: "Nota"; }
+    .modal-content td:nth-of-type(4)::before { content: "Promedio"; }
 }
 </style>
 </head>
@@ -307,7 +314,7 @@ footer {
 <body>
 
 <header>
-    <h1>Informática-1 01</h1>
+    <h1>Informática-101</h1>
     <p>Profesor Jorge D. | Educación Media</p>
 </header>
 
@@ -416,4 +423,3 @@ document.getElementById("buscadorNombre").addEventListener("input", function () 
 
 </body>
 </html>
-
