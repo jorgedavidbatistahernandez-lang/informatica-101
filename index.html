@@ -8,237 +8,72 @@
 /* =======================
    ESTILOS GENERALES
 ======================= */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f2f4f8;
-    color: #333;
-    line-height: 1.6;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f2f4f8; color: #333; line-height: 1.6; }
 
 /* =======================
    HEADER
 ======================= */
-header {
-    background: linear-gradient(135deg, #1e1e2f, #34345a);
-    color: white;
-    padding: 50px 10px;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 4em;
-    word-wrap: break-word;
-}
-
-header p {
-    opacity: 0.9;
-    font-size: 3em;
-    word-wrap: break-word;
-}
+header { background: linear-gradient(135deg, #1e1e2f, #34345a); color: white; padding: 50px 10px; text-align: center; }
+header h1 { font-size: 4em; word-wrap: break-word; }
+header p { opacity: 0.9; font-size: 3em; word-wrap: break-word; }
 
 /* =======================
    NAVBAR
 ======================= */
-nav {
-    position: sticky;
-    top: 0;
-    background-color: #1e1e2f;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 20px 5px;
-    z-index: 1000;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    position: relative;
-    font-size: 2.5em;
-    word-wrap: break-word;
-}
-
-nav a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 3px;
-    background: #4fc3f7;
-    bottom: -5px;
-    left: 0;
-    transition: 0.3s;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
+nav { position: sticky; top: 0; background-color: #1e1e2f; display: flex; justify-content: center; gap: 25px; padding: 20px 5px; z-index: 1000; flex-wrap: wrap; }
+nav a { color: white; text-decoration: none; font-weight: 600; position: relative; font-size: 2.5em; word-wrap: break-word; }
+nav a::after { content: ""; position: absolute; width: 0%; height: 3px; background: #4fc3f7; bottom: -5px; left: 0; transition: 0.3s; }
+nav a:hover::after { width: 100%; }
 
 /* =======================
    SECCIONES
 ======================= */
-section {
-    padding: 50px 5%;
-}
-
-section h2 {
-    margin-bottom: 25px;
-    color: #1e1e2f;
-    font-size: 3em;
-    word-wrap: break-word;
-}
-
-.card {
-    background: white;
-    padding: 40px 25px;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    margin-bottom: 25px;
-    animation: fadeIn 0.6s ease;
-    word-wrap: break-word;
-}
-
-.card p {
-    font-size: 2em;
-    line-height: 1.4;
-}
+section { padding: 50px 5%; }
+section h2 { margin-bottom: 25px; color: #1e1e2f; font-size: 3em; word-wrap: break-word; }
+.card { background: white; padding: 40px 25px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); margin-bottom: 25px; animation: fadeIn 0.6s ease; word-wrap: break-word; }
+.card p { font-size: 2em; line-height: 1.4; }
 
 /* =======================
    UNIDADES
 ======================= */
-.unidad {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-    transition: background 0.3s, transform 0.2s;
-    flex-wrap: wrap;
-}
-
-.unidad:hover {
-    background-color: #f0f6ff;
-    transform: translateX(3px);
-}
-
-.unidad h3 {
-    font-size: 2.5em;
-    word-wrap: break-word;
-}
-
-.unidad p {
-    font-size: 2em;
-    word-wrap: break-word;
-}
-
-.flecha {
-    font-size: 3em;
-    color: #4fc3f7;
-    font-weight: bold;
-}
+.unidad { display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: inherit; transition: background 0.3s, transform 0.2s; flex-wrap: wrap; }
+.unidad:hover { background-color: #f0f6ff; transform: translateX(3px); }
+.unidad h3 { font-size: 2.5em; word-wrap: break-word; }
+.unidad p { font-size: 2em; word-wrap: break-word; }
+.flecha { font-size: 3em; color: #4fc3f7; font-weight: bold; }
 
 /* =======================
    TABLAS
 ======================= */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th {
-    background-color: #1e1e2f;
-    color: white;
-    cursor: pointer;
-}
-
-th, td {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    font-size: 1.8em;
-}
-
-tr:hover {
-    background-color: #f1f1f1;
-}
+table { width: 100%; border-collapse: collapse; }
+th { background-color: #1e1e2f; color: white; cursor: pointer; }
+th, td { padding: 12px; text-align: center; border-bottom: 1px solid #ddd; font-size: 1.8em; }
+tr:hover { background-color: #f1f1f1; }
 
 /* =======================
    BUSCADOR
 ======================= */
-.buscador {
-    margin-bottom: 15px;
-    padding: 12px;
-    width: 100%;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 1.8em;
-}
+.buscador { margin-bottom: 15px; padding: 12px; width: 100%; border-radius: 6px; border: 1px solid #ccc; font-size: 1.8em; }
 
 /* =======================
    MODAL
 ======================= */
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    z-index: 2000;
-    overflow-y: auto; /* scroll vertical si pantalla pequeña */
-}
-
-.modal-content {
-    background: white;
-    width: 95%;
-    max-width: 700px;
-    margin: 5% auto;
-    padding: 30px;
-    border-radius: 12px;
-    font-size: 2em;
-}
-
-.modal-content table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.modal-content table th, .modal-content table td {
-    padding: 8px 6px;
-    font-size: 1.6em;
-}
-
-.close {
-    float: right;
-    font-size: 32px;
-    cursor: pointer;
-}
+.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 2000; overflow-y: auto; }
+.modal-content { background: white; width: 95%; max-width: 700px; margin: 5% auto; padding: 30px; border-radius: 12px; font-size: 2em; }
+.close { float: right; font-size: 32px; cursor: pointer; }
+.modal-content table { width: 100%; border-collapse: collapse; }
+.modal-content table th, .modal-content table td { padding: 8px 6px; font-size: 1.6em; }
 
 /* =======================
    FOOTER
 ======================= */
-footer {
-    background-color: #1e1e2f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 2em;
-    word-wrap: break-word;
-}
+footer { background-color: #1e1e2f; color: white; text-align: center; padding: 20px; margin-top: 40px; font-size: 2em; word-wrap: break-word; }
 
 /* =======================
    ANIMACIONES
 ======================= */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
 /* =======================
    RESPONSIVE MÓVIL
@@ -260,53 +95,53 @@ footer {
     .buscador { font-size: 2.5em; padding: 12px; }
 
     /* ===== MODAL RESPONSIVE ===== */
-    .modal-content {
-        width: 100%;
-        margin: 3% auto;
-        padding: 20px;
-        font-size: 2em;
+    .modal-content { width: 100%; margin: 3% auto; padding: 20px; font-size: 2em; }
+
+    /* Transformar tabla en cards */
+    .modal-content table, .modal-content thead, .modal-content tbody, .modal-content th, .modal-content td, .modal-content tr {
+        display: block; width: 100%;
     }
 
-    .modal-content table, .modal-content thead, .modal-content tbody, 
-    .modal-content th, .modal-content td, .modal-content tr {
-        display: block;
-        width: 100%;
-    }
-
-    .modal-content thead {
-        display: none; /* Oculta encabezados en móvil */
-    }
+    .modal-content thead { display: none; }
 
     .modal-content tr {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         background: #f9f9f9;
         border-radius: 10px;
-        padding: 10px;
+        padding: 10px 15px;
+        cursor: pointer;
     }
 
     .modal-content td {
         text-align: left;
-        font-size: 1.8em;
         padding: 6px 10px;
+        font-size: 1.8em;
         position: relative;
-        padding-left: 50%;
         white-space: normal;
+        display: flex;
+        justify-content: space-between;
     }
 
-    .modal-content td::before {
-        position: absolute;
-        left: 10px;
-        width: 45%;
-        padding-right: 10px;
-        white-space: nowrap;
-        font-weight: bold;
-    }
+    .modal-content td::before { font-weight: bold; margin-right: 10px; }
 
-    /* Etiquetas para cada columna */
     .modal-content td:nth-of-type(1)::before { content: "Evaluación"; }
     .modal-content td:nth-of-type(2)::before { content: "Fecha"; }
     .modal-content td:nth-of-type(3)::before { content: "Nota"; }
     .modal-content td:nth-of-type(4)::before { content: "Promedio"; }
+
+    /* Contenedor de descripción colapsable */
+    .descripcion-collapse {
+        display: none;
+        margin-top: 10px;
+        font-size: 1.6em;
+        line-height: 1.4;
+        background: #fffbe0;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    /* Mostrar al hacer click */
+    .tr-open .descripcion-collapse { display: block; }
 }
 </style>
 </head>
@@ -419,6 +254,53 @@ document.getElementById("buscadorNombre").addEventListener("input", function () 
         fila.style.display = nombre.includes(filtro) ? "" : "none";
     });
 });
+
+// ===== COLAPSAR DESCRIPCIONES EN MÓVIL =====
+function abrirModal(alumno) {
+    document.getElementById("modal").style.display = "block";
+    document.getElementById("tituloAlumno").innerText = alumno.nombre;
+
+    const detalle = document.getElementById("detalleNotas");
+    detalle.innerHTML = "";
+
+    alumno.evaluaciones.forEach(ev => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>${ev.nombre}</td>
+            <td>${ev.fecha}</td>
+            <td>${ev.nota !== null ? ev.nota : "⏳"}</td>
+            <td>${calcularPromedio(alumno)}</td>
+        `;
+        // Contenedor collapsable
+        const desc = document.createElement("div");
+        desc.className = "descripcion-collapse";
+        desc.innerHTML = ev.descripcion;
+        tr.appendChild(desc);
+
+        // Toggle collapse en móvil
+        tr.addEventListener("click", (e) => {
+            if(window.innerWidth <= 600) tr.classList.toggle("tr-open");
+            e.stopPropagation();
+        });
+
+        detalle.appendChild(tr);
+    });
+}
+
+function mostrarDescripcion(texto) {
+    let box = document.getElementById("descripcionBox");
+    if (!box) {
+        box = document.createElement("div");
+        box.id = "descripcionBox";
+        box.style.maxHeight = "250px";
+        box.style.overflowY = "auto";
+        box.style.marginTop = "15px";
+        document.querySelector(".modal-content").appendChild(box);
+    }
+    box.innerHTML = texto;
+}
+
+function cerrarModal() { document.getElementById("modal").style.display = "none"; }
 </script>
 
 </body>
