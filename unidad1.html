@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Unidad 1 – Mantenimientoo</title>
+<title>Unidad 1 – Mantenimiento</title>
 
 <style>
 /* =======================
@@ -30,18 +30,18 @@ body {
 header {
     background: linear-gradient(135deg, #1e1e2f, #34345a);
     color: white;
-    padding: 30px 15px;
+    padding: 40px 15px;
     text-align: center;
     animation: fadeInDown 1s ease;
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 2.8em;
 }
 
 header p {
     opacity: 0.9;
-    font-size: 1em;
+    font-size: 2em;
 }
 
 /* =======================
@@ -51,8 +51,8 @@ nav {
     background-color: #1e1e2f;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 10px;
+    gap: 25px;
+    padding: 15px;
     flex-wrap: wrap;
     animation: fadeIn 1.2s ease;
 }
@@ -63,7 +63,7 @@ nav a {
     font-weight: 600;
     position: relative;
     transition: 0.3s;
-    font-size: 0.95em;
+    font-size: 2em;
 }
 
 nav a:hover {
@@ -74,9 +74,9 @@ nav a::after {
     content: "";
     position: absolute;
     width: 0%;
-    height: 2px;
+    height: 3px;
     background: #4fc3f7;
-    bottom: -3px;
+    bottom: -5px;
     left: 0;
     transition: 0.3s;
 }
@@ -93,31 +93,31 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 10%;
+    padding: 50px 10%;
     animation: fadeIn 1.5s ease;
 }
 
 .card {
     background: white;
-    padding: 30px 20px;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    padding: 40px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     text-align: center;
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
     animation: pulse 2s infinite;
 }
 
 .card h2 {
     color: #1e1e2f;
-    margin-bottom: 12px;
-    font-size: 1.6em;
+    margin-bottom: 15px;
+    font-size: 2.5em;
 }
 
 .card p {
-    font-size: 1.05em;
+    font-size: 1.8em;
     color: #555;
-    line-height: 1.4;
+    line-height: 1.6;
 }
 
 /* =======================
@@ -127,9 +127,9 @@ footer {
     background-color: #1e1e2f;
     color: white;
     text-align: center;
-    padding: 12px;
+    padding: 15px;
     margin-top: auto;
-    font-size: 0.9em;
+    font-size: 1.5em;
 }
 
 /* =======================
@@ -147,38 +147,45 @@ footer {
 
 @keyframes pulse {
     0% { transform: scale(1); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
-    50% { transform: scale(1.02); box-shadow: 0 12px 25px rgba(0,0,0,0.18); }
+    50% { transform: scale(1.03); box-shadow: 0 12px 25px rgba(0,0,0,0.18); }
     100% { transform: scale(1); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
 }
 
 /* =======================
-   RESPONSIVE
+   RESPONSIVE MÓVIL
 ======================= */
 @media (max-width: 600px) {
     header h1 {
-        font-size: 1.6em;
+        font-size: 3em;
     }
     header p {
-        font-size: 0.95em;
+        font-size: 2.2em;
     }
     nav {
-        gap: 10px;
-        padding: 8px;
         flex-direction: column;
+        gap: 15px;
+        padding: 10px;
         align-items: center;
     }
+    nav a {
+        font-size: 2.2em;
+    }
     main {
-        padding: 25px 5%;
+        padding: 20px 5%;
     }
     .card {
-        padding: 20px 15px;
+        padding: 30px 20px;
     }
     .card h2 {
-        font-size: 1.4em;
+        font-size: 3em;
     }
     .card p {
-        font-size: 0.98em;
-        line-height: 1.35;
+        font-size: 2.2em;
+        line-height: 1.6;
+    }
+    footer {
+        font-size: 1.8em;
+        padding: 12px;
     }
 }
 </style>
