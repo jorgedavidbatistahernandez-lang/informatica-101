@@ -227,61 +227,74 @@ footer {
 }
 
 /* =======================
-   RESPONSIVE
+   RESPONSIVE MEJORADO
 ======================= */
 @media (max-width: 600px) {
     header h1 {
-        font-size: 1.6em;
+        font-size: 2.5em; /* antes 1.6em, ahora mucho más grande */
     }
 
     header p {
-        font-size: 0.95em;
+        font-size: 1.8em; /* antes 0.95em, ahora más legible */
     }
 
     nav {
         flex-direction: column;
-        gap: 8px;
+        gap: 12px; /* un poco más de espacio entre enlaces */
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 1.8em; /* enlaces mucho más grandes */
+        text-align: center;
     }
 
     section {
-        padding: 20px 4%;
+        padding: 20px 5%;
     }
 
     section h2 {
-        font-size: 1.3em;
+        font-size: 2em; /* títulos más grandes */
+        margin-bottom: 15px;
     }
 
     .card {
-        padding: 15px;
+        padding: 20px;
+        font-size: 1.8em; /* texto general más grande */
+        line-height: 1.5; /* para mejorar lectura */
     }
 
     .unidad {
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
+        gap: 10px;
+        font-size: 1.8em; /* contenido de unidad más grande */
     }
 
     .flecha {
-        font-size: 1.3em;
+        font-size: 2em;
         align-self: flex-end;
     }
 
     table th, table td {
-        padding: 6px;
-        font-size: 0.85em;
+        padding: 10px;
+        font-size: 1.4em; /* tablas más legibles */
     }
 
     .modal-content {
         width: 95%;
         margin: 5% auto;
-        padding: 15px;
+        padding: 20px;
+        font-size: 1.6em; /* modal más legible */
     }
 
     .buscador {
-        padding: 6px;
-        font-size: 0.9em;
+        padding: 10px;
+        font-size: 1.5em; /* buscador más grande */
+        width: 100%;
     }
 }
+
 </style>
 </head>
 
@@ -401,3 +414,4 @@ document.getElementById("buscadorNombre").addEventListener("input", function () 
 
 </body>
 </html>
+
