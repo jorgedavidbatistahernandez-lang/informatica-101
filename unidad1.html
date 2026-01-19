@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Unidad 1 – Mantenimiento</title>
+
+<style>
+/* =======================
+   ESTILOS GENERALES
+======================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f2f4f8;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =======================
+   HEADER
+======================= */
+header {
+    background: linear-gradient(135deg, #1e1e2f, #34345a);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    animation: fadeInDown 1s ease;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header p {
+    opacity: 0.9;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+nav {
+    background-color: #1e1e2f;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    flex-wrap: wrap;
+    animation: fadeIn 1.2s ease;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #4fc3f7;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #4fc3f7;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* =======================
+   SECCIÓN CENTRAL
+======================= */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15%;
+    animation: fadeIn 1.5s ease;
+}
+
+.card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    animation: pulse 2s infinite;
+}
+
+.card h2 {
+    color: #1e1e2f;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.card p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* =======================
+   ANIMACIONES
+======================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+    50% { transform: scale(1.02); box-shadow: 0 12px 25px rgba(0,0,0,0.18); }
+    100% { transform: scale(1); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    header p {
+        font-size: 0.9em;
+    }
+    main {
+        padding: 30px 5%;
+    }
+    .card h2 {
+        font-size: 1.5em;
+    }
+    .card p {
+        font-size: 1em;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Unidad 1 – Introducción</h1>
+    <p>Mensaje de Mantenimiento</p>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="unidad1.html">Unidad 1</a>
+    <a href="unidad2.html">Unidad 2</a>
+    <a href="unidad3.html">Unidad 3</a>
+</nav>
+
+<main>
+    <div class="card">
+        <h2>¡Lo sentimos!</h2>
+        <p>
+            Esta sección aún está en mantenimiento.<br>
+            Su profesor tiene poco tiempo libre, pronto este circuito estará en funcionamiento.<br>
+            ¡Gracias por su paciencia!
+        </p>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 – Curso de Programación en C++</p>
+</footer>
+
+</body>
+</html>
