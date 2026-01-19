@@ -27,16 +27,17 @@ body {
 header {
     background: linear-gradient(135deg, #1e1e2f, #34345a);
     color: white;
-    padding: 40px 20px;
+    padding: 30px 15px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 header p {
     opacity: 0.9;
+    font-size: 1em;
 }
 
 /* =======================
@@ -48,8 +49,8 @@ nav {
     background-color: #1e1e2f;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    padding: 15px;
+    gap: 20px;
+    padding: 12px;
     z-index: 1000;
     flex-wrap: wrap;
 }
@@ -59,7 +60,7 @@ nav a {
     text-decoration: none;
     font-weight: 600;
     position: relative;
-    font-size: 1em;
+    font-size: 0.95em;
 }
 
 nav a::after {
@@ -68,7 +69,7 @@ nav a::after {
     width: 0%;
     height: 2px;
     background: #4fc3f7;
-    bottom: -5px;
+    bottom: -3px;
     left: 0;
     transition: 0.3s;
 }
@@ -81,20 +82,21 @@ nav a:hover::after {
    SECCIONES
 ======================= */
 section {
-    padding: 50px 15%;
+    padding: 30px 5%;
 }
 
 section h2 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: #1e1e2f;
+    font-size: 1.4em;
 }
 
 .card {
     background: white;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    margin-bottom: 20px;
+    padding: 18px;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
     animation: fadeIn 0.6s ease;
 }
 
@@ -108,15 +110,16 @@ section h2 {
     text-decoration: none;
     color: inherit;
     transition: background 0.3s, transform 0.2s;
+    flex-wrap: wrap;
 }
 
 .unidad:hover {
     background-color: #f0f6ff;
-    transform: translateX(5px);
+    transform: translateX(3px);
 }
 
 .flecha {
-    font-size: 1.8em;
+    font-size: 1.5em;
     color: #4fc3f7;
     font-weight: bold;
 }
@@ -136,9 +139,10 @@ th {
 }
 
 th, td {
-    padding: 12px;
+    padding: 8px;
     text-align: center;
     border-bottom: 1px solid #ddd;
+    font-size: 0.9em;
 }
 
 tr:hover {
@@ -147,7 +151,7 @@ tr:hover {
 
 .arrow {
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
     color: #4fc3f7;
     font-weight: bold;
 }
@@ -156,12 +160,13 @@ tr:hover {
    BUSCADOR
 ======================= */
 .buscador {
-    margin-bottom: 15px;
-    padding: 10px;
+    margin-bottom: 12px;
+    padding: 8px;
     width: 100%;
-    max-width: 320px;
-    border-radius: 6px;
+    max-width: 100%;
+    border-radius: 4px;
     border: 1px solid #ccc;
+    font-size: 0.95em;
 }
 
 /* =======================
@@ -177,16 +182,16 @@ tr:hover {
 
 .modal-content {
     background: white;
-    width: 85%;
-    max-width: 600px;
-    margin: 5% auto;
-    padding: 25px;
-    border-radius: 10px;
+    width: 95%;
+    max-width: 500px;
+    margin: 8% auto;
+    padding: 18px;
+    border-radius: 8px;
 }
 
 .close {
     float: right;
-    font-size: 22px;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -196,9 +201,9 @@ tr:hover {
 .detalle {
     display: none;
     background: #f9fafc;
-    padding: 15px;
+    padding: 12px;
     text-align: left;
-    font-size: 14px;
+    font-size: 0.9em;
 }
 
 /* =======================
@@ -208,78 +213,73 @@ footer {
     background-color: #1e1e2f;
     color: white;
     text-align: center;
-    padding: 15px;
-    margin-top: 40px;
+    padding: 12px;
+    margin-top: 30px;
+    font-size: 0.9em;
 }
 
 /* =======================
    ANIMACIONES
 ======================= */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 /* =======================
    RESPONSIVE
 ======================= */
-@media (max-width: 900px) {
-    section {
-        padding: 40px 8%;
-    }
-}
-
 @media (max-width: 600px) {
     header h1 {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
 
     header p {
-        font-size: 0.9em;
+        font-size: 0.95em;
     }
 
     nav {
         flex-direction: column;
-        gap: 10px;
-    }
-
-    nav a {
-        font-size: 0.95em;
+        gap: 8px;
     }
 
     section {
-        padding: 30px 5%;
+        padding: 20px 4%;
+    }
+
+    section h2 {
+        font-size: 1.3em;
+    }
+
+    .card {
+        padding: 15px;
     }
 
     .unidad {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        gap: 8px;
     }
 
     .flecha {
-        font-size: 1.5em;
+        font-size: 1.3em;
         align-self: flex-end;
     }
 
-    .card {
-        padding: 20px;
-    }
-
     table th, table td {
-        padding: 8px;
+        padding: 6px;
         font-size: 0.85em;
     }
 
     .modal-content {
         width: 95%;
-        margin: 10% auto;
-        padding: 20px;
+        margin: 5% auto;
+        padding: 15px;
     }
 
     .buscador {
-        width: 100%;
-        max-width: 100%;
+        padding: 6px;
+        font-size: 0.9em;
     }
 }
 </style>
@@ -401,4 +401,3 @@ document.getElementById("buscadorNombre").addEventListener("input", function () 
 
 </body>
 </html>
-
