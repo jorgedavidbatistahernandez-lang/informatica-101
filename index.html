@@ -32,13 +32,13 @@ header {
 }
 
 header h1 {
-    font-size: 4em; /* extra grande */
+    font-size: 4em;
     word-wrap: break-word;
 }
 
 header p {
     opacity: 0.9;
-    font-size: 3em; /* extra grande */
+    font-size: 3em;
     word-wrap: break-word;
 }
 
@@ -62,7 +62,7 @@ nav a {
     text-decoration: none;
     font-weight: 600;
     position: relative;
-    font-size: 2.5em; /* grande */
+    font-size: 2.5em;
     word-wrap: break-word;
 }
 
@@ -91,7 +91,7 @@ section {
 section h2 {
     margin-bottom: 25px;
     color: #1e1e2f;
-    font-size: 3em; /* enorme */
+    font-size: 3em;
     word-wrap: break-word;
 }
 
@@ -106,7 +106,7 @@ section h2 {
 }
 
 .card p {
-    font-size: 2em; /* enorme */
+    font-size: 2em;
     line-height: 1.4;
 }
 
@@ -129,7 +129,7 @@ section h2 {
 }
 
 .unidad h3 {
-    font-size: 2.5em; /* enorme */
+    font-size: 2.5em;
     word-wrap: break-word;
 }
 
@@ -162,7 +162,7 @@ th, td {
     padding: 12px;
     text-align: center;
     border-bottom: 1px solid #ddd;
-    font-size: 1.8em; /* perfecto como antes */
+    font-size: 1.8em;
 }
 
 tr:hover {
@@ -178,7 +178,7 @@ tr:hover {
     width: 100%;
     border-radius: 6px;
     border: 1px solid #ccc;
-    font-size: 1.8em; /* perfecto */
+    font-size: 1.8em;
 }
 
 /* =======================
@@ -190,6 +190,7 @@ tr:hover {
     inset: 0;
     background: rgba(0,0,0,0.6);
     z-index: 2000;
+    overflow-y: auto; /* Permite scroll vertical en móviles */
 }
 
 .modal-content {
@@ -200,6 +201,17 @@ tr:hover {
     padding: 30px;
     border-radius: 12px;
     font-size: 2em;
+    overflow-x: auto; /* Scroll horizontal para tablas */
+}
+
+.modal-content table {
+    width: 100%;
+    display: block; /* Permite scroll horizontal */
+    overflow-x: auto;
+}
+
+.modal-content table th, .modal-content table td {
+    white-space: nowrap; /* Evita que las columnas se rompan */
 }
 
 .close {
@@ -217,7 +229,7 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
-    font-size: 2em; /* enorme */
+    font-size: 2em;
     word-wrap: break-word;
 }
 
@@ -274,6 +286,15 @@ footer {
     .modal-content {
         font-size: 2.5em;
         padding: 25px;
+        width: 100%;
+        margin: 3% auto;
+    }
+    .modal-content table {
+        display: block;
+        overflow-x: auto;
+    }
+    .modal-content table th, .modal-content table td {
+        white-space: nowrap;
     }
     .buscador {
         font-size: 2.5em;
