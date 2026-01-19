@@ -27,17 +27,19 @@ body {
 header {
     background: linear-gradient(135deg, #1e1e2f, #34345a);
     color: white;
-    padding: 40px 10px;
+    padding: 50px 10px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 3em; /* mucho más grande */
+    font-size: 4em; /* extra grande */
+    word-wrap: break-word;
 }
 
 header p {
     opacity: 0.9;
-    font-size: 2em; /* mucho más grande */
+    font-size: 3em; /* extra grande */
+    word-wrap: break-word;
 }
 
 /* =======================
@@ -49,8 +51,8 @@ nav {
     background-color: #1e1e2f;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 15px 5px;
+    gap: 25px;
+    padding: 20px 5px;
     z-index: 1000;
     flex-wrap: wrap;
 }
@@ -60,7 +62,8 @@ nav a {
     text-decoration: none;
     font-weight: 600;
     position: relative;
-    font-size: 2em; /* más grande */
+    font-size: 2.5em; /* grande */
+    word-wrap: break-word;
 }
 
 nav a::after {
@@ -82,22 +85,29 @@ nav a:hover::after {
    SECCIONES
 ======================= */
 section {
-    padding: 40px 5%;
+    padding: 50px 5%;
 }
 
 section h2 {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #1e1e2f;
-    font-size: 2.5em; /* mucho más grande */
+    font-size: 3em; /* enorme */
+    word-wrap: break-word;
 }
 
 .card {
     background: white;
-    padding: 30px 20px;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-    margin-bottom: 20px;
+    padding: 40px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    margin-bottom: 25px;
     animation: fadeIn 0.6s ease;
+    word-wrap: break-word;
+}
+
+.card p {
+    font-size: 2em; /* enorme */
+    line-height: 1.4;
 }
 
 /* =======================
@@ -118,8 +128,18 @@ section h2 {
     transform: translateX(3px);
 }
 
+.unidad h3 {
+    font-size: 2.5em; /* enorme */
+    word-wrap: break-word;
+}
+
+.unidad p {
+    font-size: 2em;
+    word-wrap: break-word;
+}
+
 .flecha {
-    font-size: 2.5em; /* más grande */
+    font-size: 3em;
     color: #4fc3f7;
     font-weight: bold;
 }
@@ -142,18 +162,11 @@ th, td {
     padding: 12px;
     text-align: center;
     border-bottom: 1px solid #ddd;
-    font-size: 1.8em; /* mucho más grande */
+    font-size: 1.8em; /* perfecto como antes */
 }
 
 tr:hover {
     background-color: #f1f1f1;
-}
-
-.arrow {
-    cursor: pointer;
-    font-size: 22px;
-    color: #4fc3f7;
-    font-weight: bold;
 }
 
 /* =======================
@@ -163,10 +176,9 @@ tr:hover {
     margin-bottom: 15px;
     padding: 12px;
     width: 100%;
-    max-width: 100%;
     border-radius: 6px;
     border: 1px solid #ccc;
-    font-size: 1.8em; /* más grande */
+    font-size: 1.8em; /* perfecto */
 }
 
 /* =======================
@@ -183,16 +195,16 @@ tr:hover {
 .modal-content {
     background: white;
     width: 95%;
-    max-width: 600px;
+    max-width: 700px;
     margin: 5% auto;
-    padding: 25px;
-    border-radius: 10px;
-    font-size: 1.8em; /* modal grande */
+    padding: 30px;
+    border-radius: 12px;
+    font-size: 2em;
 }
 
 .close {
     float: right;
-    font-size: 28px;
+    font-size: 32px;
     cursor: pointer;
 }
 
@@ -203,9 +215,10 @@ footer {
     background-color: #1e1e2f;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     margin-top: 40px;
-    font-size: 1.8em; /* más grande */
+    font-size: 2em; /* enorme */
+    word-wrap: break-word;
 }
 
 /* =======================
@@ -221,51 +234,50 @@ footer {
 ======================= */
 @media (max-width: 600px) {
     header h1 {
-        font-size: 4em; /* enorme para móviles */
+        font-size: 5em;
     }
     header p {
-        font-size: 2.5em;
+        font-size: 3.5em;
     }
     nav {
         flex-direction: column;
-        gap: 15px;
-        padding: 10px 5px;
+        gap: 20px;
     }
     nav a {
-        font-size: 2.5em; /* enlaces grandes y clicables */
-    }
-    section {
-        padding: 20px 3%;
-    }
-    section h2 {
         font-size: 3em;
     }
-    .card {
-        padding: 25px 15px;
+    section {
+        padding: 25px 3%;
     }
-    .unidad {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
+    section h2 {
+        font-size: 4em;
+    }
+    .card {
+        padding: 30px 15px;
+    }
+    .card p {
+        font-size: 3em;
+        line-height: 1.4;
+    }
+    .unidad h3 {
+        font-size: 3em;
+    }
+    .unidad p {
         font-size: 2.5em;
     }
     .flecha {
-        font-size: 3em;
-        align-self: flex-end;
+        font-size: 3.5em;
     }
     table th, table td {
-        padding: 10px;
         font-size: 2.2em;
     }
     .modal-content {
-        width: 95%;
-        margin: 5% auto;
-        padding: 20px;
-        font-size: 2em;
+        font-size: 2.5em;
+        padding: 25px;
     }
     .buscador {
-        padding: 10px;
-        font-size: 2.2em;
+        font-size: 2.5em;
+        padding: 12px;
     }
 }
 </style>
