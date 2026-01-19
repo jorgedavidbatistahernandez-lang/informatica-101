@@ -27,17 +27,17 @@ body {
 header {
     background: linear-gradient(135deg, #1e1e2f, #34345a);
     color: white;
-    padding: 30px 15px;
+    padding: 40px 10px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 3em; /* mucho más grande */
 }
 
 header p {
     opacity: 0.9;
-    font-size: 1em;
+    font-size: 2em; /* mucho más grande */
 }
 
 /* =======================
@@ -50,7 +50,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 12px;
+    padding: 15px 5px;
     z-index: 1000;
     flex-wrap: wrap;
 }
@@ -60,16 +60,16 @@ nav a {
     text-decoration: none;
     font-weight: 600;
     position: relative;
-    font-size: 0.95em;
+    font-size: 2em; /* más grande */
 }
 
 nav a::after {
     content: "";
     position: absolute;
     width: 0%;
-    height: 2px;
+    height: 3px;
     background: #4fc3f7;
-    bottom: -3px;
+    bottom: -5px;
     left: 0;
     transition: 0.3s;
 }
@@ -82,21 +82,21 @@ nav a:hover::after {
    SECCIONES
 ======================= */
 section {
-    padding: 30px 5%;
+    padding: 40px 5%;
 }
 
 section h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     color: #1e1e2f;
-    font-size: 1.4em;
+    font-size: 2.5em; /* mucho más grande */
 }
 
 .card {
     background: white;
-    padding: 18px;
-    border-radius: 6px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-    margin-bottom: 15px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    margin-bottom: 20px;
     animation: fadeIn 0.6s ease;
 }
 
@@ -119,7 +119,7 @@ section h2 {
 }
 
 .flecha {
-    font-size: 1.5em;
+    font-size: 2.5em; /* más grande */
     color: #4fc3f7;
     font-weight: bold;
 }
@@ -139,10 +139,10 @@ th {
 }
 
 th, td {
-    padding: 8px;
+    padding: 12px;
     text-align: center;
     border-bottom: 1px solid #ddd;
-    font-size: 0.9em;
+    font-size: 1.8em; /* mucho más grande */
 }
 
 tr:hover {
@@ -151,7 +151,7 @@ tr:hover {
 
 .arrow {
     cursor: pointer;
-    font-size: 18px;
+    font-size: 22px;
     color: #4fc3f7;
     font-weight: bold;
 }
@@ -160,13 +160,13 @@ tr:hover {
    BUSCADOR
 ======================= */
 .buscador {
-    margin-bottom: 12px;
-    padding: 8px;
+    margin-bottom: 15px;
+    padding: 12px;
     width: 100%;
     max-width: 100%;
-    border-radius: 4px;
+    border-radius: 6px;
     border: 1px solid #ccc;
-    font-size: 0.95em;
+    font-size: 1.8em; /* más grande */
 }
 
 /* =======================
@@ -183,27 +183,17 @@ tr:hover {
 .modal-content {
     background: white;
     width: 95%;
-    max-width: 500px;
-    margin: 8% auto;
-    padding: 18px;
-    border-radius: 8px;
+    max-width: 600px;
+    margin: 5% auto;
+    padding: 25px;
+    border-radius: 10px;
+    font-size: 1.8em; /* modal grande */
 }
 
 .close {
     float: right;
-    font-size: 20px;
+    font-size: 28px;
     cursor: pointer;
-}
-
-/* =======================
-   DETALLE
-======================= */
-.detalle {
-    display: none;
-    background: #f9fafc;
-    padding: 12px;
-    text-align: left;
-    font-size: 0.9em;
 }
 
 /* =======================
@@ -213,88 +203,71 @@ footer {
     background-color: #1e1e2f;
     color: white;
     text-align: center;
-    padding: 12px;
-    margin-top: 30px;
-    font-size: 0.9em;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 1.8em; /* más grande */
 }
 
 /* =======================
    ANIMACIONES
 ======================= */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 /* =======================
-   RESPONSIVE MEJORADO
+   RESPONSIVE MÓVIL
 ======================= */
 @media (max-width: 600px) {
     header h1 {
-        font-size: 2.5em; /* antes 1.6em, ahora mucho más grande */
+        font-size: 4em; /* enorme para móviles */
     }
-
     header p {
-        font-size: 1.8em; /* antes 0.95em, ahora más legible */
+        font-size: 2.5em;
     }
-
     nav {
         flex-direction: column;
-        gap: 12px; /* un poco más de espacio entre enlaces */
-        padding: 10px;
+        gap: 15px;
+        padding: 10px 5px;
     }
-
     nav a {
-        font-size: 1.8em; /* enlaces mucho más grandes */
-        text-align: center;
+        font-size: 2.5em; /* enlaces grandes y clicables */
     }
-
     section {
-        padding: 20px 5%;
+        padding: 20px 3%;
     }
-
     section h2 {
-        font-size: 2em; /* títulos más grandes */
-        margin-bottom: 15px;
+        font-size: 3em;
     }
-
     .card {
-        padding: 20px;
-        font-size: 1.8em; /* texto general más grande */
-        line-height: 1.5; /* para mejorar lectura */
+        padding: 25px 15px;
     }
-
     .unidad {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
-        font-size: 1.8em; /* contenido de unidad más grande */
+        gap: 12px;
+        font-size: 2.5em;
     }
-
     .flecha {
-        font-size: 2em;
+        font-size: 3em;
         align-self: flex-end;
     }
-
     table th, table td {
         padding: 10px;
-        font-size: 1.4em; /* tablas más legibles */
+        font-size: 2.2em;
     }
-
     .modal-content {
         width: 95%;
         margin: 5% auto;
         padding: 20px;
-        font-size: 1.6em; /* modal más legible */
+        font-size: 2em;
     }
-
     .buscador {
         padding: 10px;
-        font-size: 1.5em; /* buscador más grande */
-        width: 100%;
+        font-size: 2.2em;
     }
 }
-
 </style>
 </head>
 
@@ -312,7 +285,7 @@ footer {
 </nav>
 
 <section id="inicio">
-    <h2>Bienvenidoss</h2>
+    <h2>Bienvenidos</h2>
     <div class="card">
         <p>
             Esta plataforma ha sido creada para acompañar el proceso de aprendizaje
@@ -357,7 +330,6 @@ footer {
 <h2>Calificaciones</h2>
 
 <div class="card">
-
 <input type="text" id="buscadorNombre" class="buscador" placeholder="Buscar alumno por nombre...">
 
 <table id="tablaAlumnos">
@@ -371,7 +343,6 @@ footer {
 </thead>
 <tbody></tbody>
 </table>
-
 </div>
 </section>
 
@@ -399,12 +370,10 @@ footer {
 </footer>
 
 <script src="notas.js"></script>
-
 <script>
 document.getElementById("buscadorNombre").addEventListener("input", function () {
     const filtro = this.value.toLowerCase();
     const filas = document.querySelectorAll("#tablaAlumnos tbody tr");
-
     filas.forEach(fila => {
         const nombre = fila.children[1].innerText.toLowerCase();
         fila.style.display = nombre.includes(filtro) ? "" : "none";
@@ -414,5 +383,3 @@ document.getElementById("buscadorNombre").addEventListener("input", function () 
 
 </body>
 </html>
-
-
