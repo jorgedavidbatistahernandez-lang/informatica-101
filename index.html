@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Informática--101</title>
+<title>Informática-101</title>
 
 <style>
 /* =======================
@@ -32,13 +32,13 @@ header {
 }
 
 header h1 {
-    font-size: 4em; /* extra grande */
+    font-size: 4em;
     word-wrap: break-word;
 }
 
 header p {
     opacity: 0.9;
-    font-size: 3em; /* extra grande */
+    font-size: 3em;
     word-wrap: break-word;
 }
 
@@ -62,7 +62,7 @@ nav a {
     text-decoration: none;
     font-weight: 600;
     position: relative;
-    font-size: 2.5em; /* grande */
+    font-size: 2.5em;
     word-wrap: break-word;
 }
 
@@ -91,7 +91,7 @@ section {
 section h2 {
     margin-bottom: 25px;
     color: #1e1e2f;
-    font-size: 3em; /* enorme */
+    font-size: 3em;
     word-wrap: break-word;
 }
 
@@ -106,7 +106,7 @@ section h2 {
 }
 
 .card p {
-    font-size: 2em; /* enorme */
+    font-size: 2em;
     line-height: 1.4;
 }
 
@@ -129,7 +129,7 @@ section h2 {
 }
 
 .unidad h3 {
-    font-size: 2.5em; /* enorme */
+    font-size: 2.5em;
     word-wrap: break-word;
 }
 
@@ -159,14 +159,21 @@ th {
 }
 
 th, td {
-    padding: 12px;
+    padding: 14px;
     text-align: center;
     border-bottom: 1px solid #ddd;
-    font-size: 1.8em; /* perfecto como antes */
+    font-size: 2em;
 }
 
 tr:hover {
     background-color: #f1f1f1;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 22px;
+    color: #4fc3f7;
+    font-weight: bold;
 }
 
 /* =======================
@@ -174,11 +181,11 @@ tr:hover {
 ======================= */
 .buscador {
     margin-bottom: 15px;
-    padding: 12px;
+    padding: 14px;
     width: 100%;
     border-radius: 6px;
     border: 1px solid #ccc;
-    font-size: 1.8em; /* perfecto */
+    font-size: 2.2em;
 }
 
 /* =======================
@@ -188,23 +195,25 @@ tr:hover {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7);
     z-index: 2000;
+    overflow-y: auto;
 }
 
 .modal-content {
     background: white;
-    width: 95%;
-    max-width: 700px;
+    width: 90%;
+    max-width: 800px;
     margin: 5% auto;
-    padding: 30px;
+    padding: 35px;
     border-radius: 12px;
-    font-size: 2em;
+    font-size: 2.2em;
+    word-wrap: break-word;
 }
 
 .close {
     float: right;
-    font-size: 32px;
+    font-size: 36px;
     cursor: pointer;
 }
 
@@ -217,7 +226,7 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
-    font-size: 2em; /* enorme */
+    font-size: 2em;
     word-wrap: break-word;
 }
 
@@ -269,11 +278,15 @@ footer {
         font-size: 3.5em;
     }
     table th, table td {
-        font-size: 2.2em;
+        font-size: 2.8em;
+        padding: 10px;
     }
     .modal-content {
         font-size: 2.5em;
         padding: 25px;
+    }
+    .close {
+        font-size: 42px;
     }
     .buscador {
         font-size: 2.5em;
@@ -395,4 +408,3 @@ document.getElementById("buscadorNombre").addEventListener("input", function () 
 
 </body>
 </html>
-
