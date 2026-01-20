@@ -229,3 +229,31 @@ function mostrarDescripcion(texto) {
 function cerrarModal() {
     document.getElementById("modal").style.display = "none";
 }
+let ordenAscendente = true;
+
+function ordenarTabla(columna) {
+    const tbody = document.querySelector("#tablaAlumnos tbody");
+    const filas = Array.from(tbody.querySelectorAll("tr"));
+
+    filas.sort((a, b) => {
+        let valorA = a.children[columna].innerText.trim();
+        let valorB = b.children[columna].innerText.trim();
+
+        // Si es número
+        if (!isNaN(valorA) && !isNaN(valorB)) {
+            return ordenAscendente
+                ? Number(valorA) - Number(valorB)
+                : Number(valorB) - Number(valorA);
+        }
+
+        // Si es texto
+        return ordenAscendente
+            ? valorA.localeCompare(valorB)
+            : valorB.localeCompare(valorA);
+    });
+
+    ordenAscendente = !ordenAscendente;
+
+    tbody.innerHTML = "";
+    filas.forEach(fila => tbody.appendChild(fila));
+}
