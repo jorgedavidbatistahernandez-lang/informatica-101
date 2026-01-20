@@ -29,16 +29,14 @@ header {
     color: #fff;
     padding: 45px 15px;
     text-align: center;
-    animation: fadeDown 0.8s ease;
 }
 
 header h1 {
     font-size: 2.8em;
-    letter-spacing: 1px;
 }
 
 header p {
-    font-size: 1.4em;
+    font-size: 1.3em;
     opacity: 0.9;
 }
 
@@ -60,23 +58,6 @@ nav a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1em;
-    position: relative;
-}
-
-nav a::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background: #4fc3f7;
-    transition: 0.3s;
-}
-
-nav a:hover::after {
-    width: 100%;
 }
 
 /* =====================================================
@@ -84,7 +65,6 @@ nav a:hover::after {
 ===================================================== */
 section {
     padding: 50px 8%;
-    animation: fadeUp 0.7s ease;
 }
 
 section h2 {
@@ -99,19 +79,9 @@ section h2 {
 .card {
     background: #fff;
     padding: 30px;
-    border-radius: 12px;
+    border-radius: 14px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     margin-bottom: 25px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-}
-
-.card p {
-    font-size: 1.1em;
 }
 
 /* =====================================================
@@ -149,7 +119,7 @@ table {
 
 th {
     background: #1e1e2f;
-    color: white;
+    color: #fff;
 }
 
 th, td {
@@ -157,10 +127,6 @@ th, td {
     font-size: 1em;
     text-align: center;
     border-bottom: 1px solid #ddd;
-}
-
-tr:hover {
-    background: #f3f6ff;
 }
 
 /* =====================================================
@@ -193,8 +159,7 @@ tr:hover {
     max-width: 800px;
     margin: 4% auto;
     padding: 30px;
-    border-radius: 14px;
-    animation: scaleIn 0.4s ease;
+    border-radius: 16px;
 }
 
 .modal-content h3 {
@@ -215,44 +180,54 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
-    font-size: 1em;
 }
 
 /* =====================================================
-   ANIMATIONS
-===================================================== */
-@keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes scaleIn {
-    from { transform: scale(0.95); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-/* =====================================================
-   MOBILE (CARDS MODAL)
+   MOBILE – OPTIMIZADO EDUCATIVO
 ===================================================== */
 @media (max-width: 600px) {
 
-    header h1 { font-size: 3.5em; }
-    header p { font-size: 2em; }
+    header h1 { font-size: 3.6em; }
+    header p { font-size: 2.1em; }
 
-    nav { flex-direction: column; gap: 15px; }
-    nav a { font-size: 2em; }
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
 
-    section { padding: 25px 4%; }
-    section h2 { font-size: 3em; }
+    nav a {
+        font-size: 2.2em;
+    }
 
-    .card p { font-size: 2em; }
+    section {
+        padding: 30px 5%;
+    }
 
-    /* Modal Cards */
+    section h2 {
+        font-size: 3em;
+    }
+
+    .card {
+        padding: 30px;
+    }
+
+    .card p {
+        font-size: 2em;
+    }
+
+    .unidad h3 {
+        font-size: 2.4em;
+    }
+
+    .unidad p {
+        font-size: 1.9em;
+    }
+
+    .flecha {
+        font-size: 3em;
+    }
+
+    /* TABLA → CARDS */
     .modal-content table,
     .modal-content thead,
     .modal-content tbody,
@@ -262,21 +237,22 @@ footer {
         width: 100%;
     }
 
-    .modal-content thead { display: none; }
+    .modal-content thead {
+        display: none;
+    }
 
     .modal-content tr {
-        background: #f9f9f9;
-        margin-bottom: 15px;
-        padding: 15px;
-        border-radius: 12px;
-        cursor: pointer;
+        background: #f4f6fb;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 16px;
     }
 
     .modal-content td {
         display: flex;
         justify-content: space-between;
-        font-size: 1.8em;
-        padding: 6px 0;
+        font-size: 2em;
+        padding: 8px 0;
     }
 
     .modal-content td::before {
@@ -289,16 +265,11 @@ footer {
     .modal-content td:nth-of-type(4)::before { content: "Promedio"; }
 
     .descripcion-collapse {
-        display: none;
-        margin-top: 10px;
-        padding: 10px;
-        background: #fff7d6;
-        border-radius: 8px;
-        font-size: 1.7em;
-    }
-
-    .tr-open .descripcion-collapse {
-        display: block;
+        margin-top: 15px;
+        padding: 15px;
+        background: #fff3cd;
+        border-radius: 12px;
+        font-size: 1.9em;
     }
 }
 </style>
@@ -320,20 +291,38 @@ footer {
 <section id="inicio">
     <h2>Bienvenidos</h2>
     <div class="card">
-        <p>Esta plataforma acompaña el aprendizaje de <strong>Programación en C++</strong>.</p>
-        <p>Incluye contenidos teóricos, ejemplos prácticos y seguimiento académico.</p>
+        <p>Esta plataforma acompaña el aprendizaje de Programación en C++.</p>
+        <p>Incluye contenidos teóricos, ejercicios prácticos y seguimiento académico.</p>
     </div>
 </section>
 
 <section id="contenidos">
     <h2>Contenidos del Curso</h2>
+
     <a href="unidad1.html" class="card unidad">
         <div>
-            <h3>Unidad 1 – Introducción</h3>
-            <p>Algoritmos, lógica y diagramas de flujo.</p>
+            <h3>Unidad 1 – Introducción a la Programación</h3>
+            <p>Algoritmos, pensamiento lógico y diagramas de flujo.</p>
         </div>
         <div class="flecha">→</div>
     </a>
+
+    <a href="unidad2.html" class="card unidad">
+        <div>
+            <h3>Unidad 2 – Variables y Tipos de Datos</h3>
+            <p>Tipos primitivos, declaración de variables y constantes.</p>
+        </div>
+        <div class="flecha">→</div>
+    </a>
+
+    <a href="unidad3.html" class="card unidad">
+        <div>
+            <h3>Unidad 3 – Estructuras Condicionales</h3>
+            <p>Uso de if, else, operadores lógicos y toma de decisiones.</p>
+        </div>
+        <div class="flecha">→</div>
+    </a>
+
 </section>
 
 <section id="notas">
@@ -377,6 +366,5 @@ footer {
 </footer>
 
 <script src="notas.js"></script>
-
 </body>
 </html>
