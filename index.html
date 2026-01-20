@@ -18,6 +18,7 @@ body {
     line-height: 1.5;
 }
 
+/* HEADER */
 header {
     background: linear-gradient(135deg, #1e1e2f, #34345a);
     color: white;
@@ -28,6 +29,7 @@ header {
 header h1 { font-size: 4em; }
 header p { font-size: 3em; }
 
+/* NAV */
 nav {
     position: sticky;
     top: 0;
@@ -47,6 +49,7 @@ nav a {
     font-size: 2.5em;
 }
 
+/* SECCIONES */
 section {
     padding: 50px 5%;
 }
@@ -57,6 +60,7 @@ section h2 {
     font-size: 3em;
 }
 
+/* CARD */
 .card {
     background: white;
     padding: 40px 25px;
@@ -67,12 +71,13 @@ section h2 {
 
 .card p { font-size: 2em; }
 
+/* UNIDADES */
 .unidad {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: inherit;
     text-decoration: none;
+    color: inherit;
     flex-wrap: wrap;
 }
 
@@ -84,6 +89,7 @@ section h2 {
     color: #4fc3f7;
 }
 
+/* TABLAS */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -102,6 +108,7 @@ th, td {
     font-size: 1.8em;
 }
 
+/* BUSCADOR */
 .buscador {
     margin-bottom: 15px;
     padding: 14px;
@@ -111,6 +118,7 @@ th, td {
     font-size: 1.8em;
 }
 
+/* MODAL */
 .modal {
     display: none;
     position: fixed;
@@ -136,6 +144,7 @@ th, td {
     cursor: pointer;
 }
 
+/* FOOTER */
 footer {
     background-color: #1e1e2f;
     color: white;
@@ -144,32 +153,39 @@ footer {
     font-size: 2em;
 }
 
-/* MÓVIL */
+/* ======================
+   MÓVIL (TABLA VISIBLE)
+====================== */
 @media (max-width: 600px) {
 
-    table, thead, tbody, tr, td {
+    table {
+        border: none;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
         display: block;
-        width: 100%;
+        background: #ffffff;
+        margin-bottom: 25px;
+        padding: 25px;
+        border-radius: 18px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     }
 
-    thead { display: none; }
-
-    tr {
-        background: #f2f4f8;
-        margin-bottom: 20px;
-        padding: 20px;
-        border-radius: 16px;
-    }
-
-    td {
+    tbody td {
         display: flex;
         justify-content: space-between;
         font-size: 3.2em;
+        padding: 10px 0;
+        border: none;
     }
 
-    td:nth-child(1)::before { content: "Nº"; font-weight: bold; }
-    td:nth-child(2)::before { content: "Nombre"; font-weight: bold; }
-    td:nth-child(3)::before { content: "Promedio"; font-weight: bold; }
+    tbody td:nth-child(1)::before { content: "Nº"; font-weight: bold; }
+    tbody td:nth-child(2)::before { content: "Nombre"; font-weight: bold; }
+    tbody td:nth-child(3)::before { content: "Promedio"; font-weight: bold; }
 }
 </style>
 </head>
@@ -186,6 +202,48 @@ footer {
     <a href="#contenidos">Contenidos</a>
     <a href="#notas">Notas</a>
 </nav>
+
+<section id="inicio">
+    <h2>Bienvenidos</h2>
+    <div class="card">
+        <p>
+            Esta plataforma ha sido creada para acompañar el proceso de aprendizaje
+            de la asignatura <strong>Programación en C++</strong>.
+        </p>
+        <p>
+            Aquí encontrarás resúmenes teóricos, ejemplos claros y el seguimiento
+            de las calificaciones del curso.
+        </p>
+    </div>
+</section>
+
+<section id="contenidos">
+    <h2>Contenidos del Curso</h2>
+
+    <a href="unidad1.html" class="card unidad">
+        <div>
+            <h3>Unidad 1 – Introducción</h3>
+            <p>Algoritmos, lógica, pseudocódigo y diagramas de flujo.</p>
+        </div>
+        <div class="flecha">→</div>
+    </a>
+
+    <a href="unidad2.html" class="card unidad">
+        <div>
+            <h3>Unidad 2 – Variables y Tipos de Datos</h3>
+            <p>int, float, double, char, string, entrada y salida de datos.</p>
+        </div>
+        <div class="flecha">→</div>
+    </a>
+
+    <a href="unidad3.html" class="card unidad">
+        <div>
+            <h3>Unidad 3 – Condicionales</h3>
+            <p>if, if-else, else if y buenas prácticas de escritura.</p>
+        </div>
+        <div class="flecha">→</div>
+    </a>
+</section>
 
 <section id="notas">
     <h2>Calificaciones</h2>
