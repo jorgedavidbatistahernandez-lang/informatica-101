@@ -2,190 +2,142 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Informática--101</title>
+<title>Informática-101</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    font-family:'Segoe UI',Arial,sans-serif;
+    background:#f2f4f8;
+    color:#333
 }
 
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f2f4f8;
-    color: #333;
-    line-height: 1.5;
+header{
+    background:linear-gradient(135deg,#1e1e2f,#34345a);
+    color:white;
+    padding:50px 10px;
+    text-align:center
+}
+header h1{font-size:4em}
+header p{font-size:3em}
+
+nav{
+    position:sticky;
+    top:0;
+    background:#1e1e2f;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    padding:20px;
+    z-index:1000;
+    flex-wrap:wrap
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:2.5em;
+    font-weight:600
 }
 
-/* HEADER */
-header {
-    background: linear-gradient(135deg, #1e1e2f, #34345a);
-    color: white;
-    padding: 50px 10px;
-    text-align: center;
+section{padding:50px 5%}
+section h2{font-size:3em;margin-bottom:25px;color:#1e1e2f}
+
+.card{
+    background:white;
+    padding:40px 25px;
+    border-radius:14px;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+    margin-bottom:25px
+}
+.card p{font-size:2em}
+
+.unidad{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    text-decoration:none;
+    color:inherit;
+    flex-wrap:wrap
+}
+.unidad h3{font-size:2.5em}
+.unidad p{font-size:2em}
+.flecha{font-size:3em;color:#4fc3f7}
+
+table{width:100%;border-collapse:collapse}
+th,td{
+    padding:14px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+    font-size:1.8em
+}
+th{
+    background:#1e1e2f;
+    color:white;
+    cursor:pointer
 }
 
-header h1 { font-size: 4em; }
-header p { font-size: 3em; }
-
-/* NAV */
-nav {
-    position: sticky;
-    top: 0;
-    background-color: #1e1e2f;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 20px 5px;
-    z-index: 1000;
-    flex-wrap: wrap;
+.buscador{
+    width:100%;
+    padding:16px;
+    margin-bottom:20px;
+    font-size:2em;
+    border-radius:10px;
+    border:1px solid #ccc
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 2.5em;
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    z-index:2000
+}
+.modal-content{
+    background:white;
+    width:95%;
+    max-width:900px;
+    margin:3% auto;
+    padding:30px;
+    border-radius:18px;
+    max-height:94vh;
+    overflow-y:auto
+}
+.close{
+    float:right;
+    font-size:36px;
+    cursor:pointer
 }
 
-/* SECCIONES */
-section {
-    padding: 50px 5%;
+footer{
+    background:#1e1e2f;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:2em
 }
 
-section h2 {
-    margin-bottom: 25px;
-    color: #1e1e2f;
-    font-size: 3em;
-}
-
-/* CARD */
-.card {
-    background: white;
-    padding: 40px 25px;
-    border-radius: 14px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    margin-bottom: 25px;
-}
-
-.card p { font-size: 2em; }
-
-/* UNIDADES */
-.unidad {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-    flex-wrap: wrap;
-}
-
-.unidad h3 { font-size: 2.5em; }
-.unidad p { font-size: 2em; }
-
-.flecha {
-    font-size: 3em;
-    color: #4fc3f7;
-}
-
-/* TABLAS */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th {
-    background-color: #1e1e2f;
-    color: white;
-    cursor: pointer;
-}
-
-th, td {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    font-size: 1.8em;
-}
-
-/* BUSCADOR */
-.buscador {
-    margin-bottom: 15px;
-    padding: 14px;
-    width: 100%;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1.8em;
-}
-
-/* MODAL */
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-    z-index: 2000;
-}
-
-.modal-content {
-    background: white;
-    width: 95%;
-    max-width: 900px;
-    margin: 3% auto;
-    padding: 30px;
-    border-radius: 16px;
-    max-height: 94vh;
-    overflow-y: auto;
-}
-
-.close {
-    float: right;
-    font-size: 34px;
-    cursor: pointer;
-}
-
-/* FOOTER */
-footer {
-    background-color: #1e1e2f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 2em;
-}
-
-/* ======================
-   MÓVIL (TABLA VISIBLE)
-====================== */
-@media (max-width: 600px) {
-
-    table {
-        border: none;
+/* MÓVIL */
+@media(max-width:600px){
+    thead{display:none}
+    tbody tr{
+        display:block;
+        background:white;
+        margin-bottom:25px;
+        padding:25px;
+        border-radius:18px;
+        box-shadow:0 6px 18px rgba(0,0,0,.12)
     }
-
-    thead {
-        display: none;
+    tbody td{
+        display:flex;
+        justify-content:space-between;
+        font-size:3.2em;
+        padding:10px 0;
+        border:none
     }
-
-    tbody tr {
-        display: block;
-        background: #ffffff;
-        margin-bottom: 25px;
-        padding: 25px;
-        border-radius: 18px;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-    }
-
-    tbody td {
-        display: flex;
-        justify-content: space-between;
-        font-size: 3.2em;
-        padding: 10px 0;
-        border: none;
-    }
-
-    tbody td:nth-child(1)::before { content: "Nº"; font-weight: bold; }
-    tbody td:nth-child(2)::before { content: "Nombre"; font-weight: bold; }
-    tbody td:nth-child(3)::before { content: "Promedio"; font-weight: bold; }
+    tbody td:nth-child(1)::before{content:"Nº"}
+    tbody td:nth-child(2)::before{content:"Nombre"}
+    tbody td:nth-child(3)::before{content:"Promedio"}
 }
 </style>
 </head>
@@ -194,7 +146,7 @@ footer {
 
 <header>
     <h1>Informática-101</h1>
-    <p>Profesor Jorge D. | Educación Media</p>
+    <p>Profesor Jorge D.</p>
 </header>
 
 <nav>
@@ -204,99 +156,42 @@ footer {
 </nav>
 
 <section id="inicio">
-    <h2>Bienvenidos</h2>
-    <div class="card">
-        <p>
-            Esta plataforma ha sido creada para acompañar el proceso de aprendizaje
-            de la asignatura <strong>Programación en C++</strong>.
-        </p>
-        <p>
-            Aquí encontrarás resúmenes teóricos, ejemplos claros y el seguimiento
-            de las calificaciones del curso.
-        </p>
-    </div>
+<div class="card">
+<p>Curso de Programación en C++ – seguimiento académico.</p>
+</div>
 </section>
 
 <section id="contenidos">
-    <h2>Contenidos del Curso</h2>
-
-    <a href="unidad1.html" class="card unidad">
-        <div>
-            <h3>Unidad 1 – Introducción</h3>
-            <p>Algoritmos, lógica, pseudocódigo y diagramas de flujo.</p>
-        </div>
-        <div class="flecha">→</div>
-    </a>
-
-    <a href="unidad2.html" class="card unidad">
-        <div>
-            <h3>Unidad 2 – Variables y Tipos de Datos</h3>
-            <p>int, float, double, char, string, entrada y salida de datos.</p>
-        </div>
-        <div class="flecha">→</div>
-    </a>
-
-    <a href="unidad3.html" class="card unidad">
-        <div>
-            <h3>Unidad 3 – Condicionales</h3>
-            <p>if, if-else, else if y buenas prácticas de escritura.</p>
-        </div>
-        <div class="flecha">→</div>
-    </a>
+<a class="card unidad"><div><h3>Unidad 1</h3><p>Introducción</p></div><div class="flecha">→</div></a>
+<a class="card unidad"><div><h3>Unidad 2</h3><p>Tipos de Datos</p></div><div class="flecha">→</div></a>
+<a class="card unidad"><div><h3>Unidad 3</h3><p>Condicionales</p></div><div class="flecha">→</div></a>
 </section>
 
 <section id="notas">
-    <h2>Calificaciones</h2>
-
-    <div class="card">
-        <input type="text" id="buscadorNombre" class="buscador" placeholder="Buscar alumno por nombre...">
-
-        <table id="tablaAlumnos">
-            <thead>
-                <tr>
-                    <th onclick="ordenarTabla(0)">Nº</th>
-                    <th onclick="ordenarTabla(1)">Nombre</th>
-                    <th onclick="ordenarTabla(2)">Promedio</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </div>
+<div class="card">
+<input id="buscadorNombre" class="buscador" placeholder="Buscar alumno">
+<table id="tablaAlumnos">
+<thead>
+<tr><th>Nº</th><th>Nombre</th><th>Promedio</th><th></th></tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
 </section>
 
 <div class="modal" id="modal">
-    <div class="modal-content">
-        <span class="close" onclick="cerrarModal()">✖</span>
-        <h3 id="tituloAlumno"></h3>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Evaluación</th>
-                    <th>Fecha</th>
-                    <th>Nota</th>
-                    <th>Promedio</th>
-                </tr>
-            </thead>
-            <tbody id="detalleNotas"></tbody>
-        </table>
-    </div>
+<div class="modal-content">
+<span class="close" onclick="cerrarModal()">✖</span>
+<h3 id="tituloAlumno"></h3>
+<table>
+<thead><tr><th>Evaluación</th><th>Fecha</th><th>Nota</th><th>Promedio</th></tr></thead>
+<tbody id="detalleNotas"></tbody>
+</table>
+</div>
 </div>
 
-<footer>
-    <p>© 2026 – Curso de Programación en C++</p>
-</footer>
+<footer>© 2026 – Informática</footer>
 
 <script src="notas.js"></script>
-<script>
-document.getElementById("buscadorNombre").addEventListener("input", function () {
-    const filtro = this.value.toLowerCase();
-    document.querySelectorAll("#tablaAlumnos tbody tr").forEach(fila => {
-        fila.style.display = fila.innerText.toLowerCase().includes(filtro) ? "" : "none";
-    });
-});
-</script>
-
 </body>
 </html>
