@@ -2,289 +2,212 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Informática--101</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Informática 101</title>
 
 <style>
-/* =======================
-   RESET
-======================= */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* =======================
-   BODY
-======================= */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f2f4f8;
-    color: #333;
-    line-height: 1.5;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6fb;
+    color: #2c2c2c;
 }
 
-/* =======================
-   HEADER
-======================= */
+/* HEADER */
 header {
-    background: linear-gradient(135deg, #1e1e2f, #34345a);
+    background: linear-gradient(135deg, #1e1e2f, #2e2e4f);
     color: white;
-    padding: 50px 10px;
     text-align: center;
+    padding: 40px 10px;
 }
 
-header h1 {
-    font-size: 4em;
-}
+header h1 { font-size: 2.6em; }
+header p { font-size: 1.3em; }
 
-header p {
-    font-size: 3em;
-}
-
-/* =======================
-   NAVBAR
-======================= */
+/* NAV */
 nav {
-    position: sticky;
-    top: 0;
-    background-color: #1e1e2f;
+    background: #1e1e2f;
     display: flex;
     justify-content: center;
     gap: 25px;
-    padding: 20px 5px;
-    z-index: 1000;
-    flex-wrap: wrap;
+    padding: 15px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 2.5em;
+    font-weight: bold;
 }
 
-/* =======================
-   SECCIONES
-======================= */
+/* SECTIONS */
 section {
-    padding: 50px 5%;
+    padding: 40px 6%;
 }
 
-section h2 {
-    margin-bottom: 25px;
-    color: #1e1e2f;
-    font-size: 3em;
+h2 {
+    font-size: 2.1em;
+    margin-bottom: 20px;
 }
 
-/* =======================
-   CARD
-======================= */
+/* CARD */
 .card {
     background: white;
-    padding: 40px 25px;
+    padding: 25px;
     border-radius: 14px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     margin-bottom: 25px;
 }
 
-.card p {
-    font-size: 2em;
-}
-
-/* =======================
-   UNIDADES
-======================= */
+/* UNIDADES */
 .unidad {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-decoration: none;
-    color: inherit;
-    flex-wrap: wrap;
 }
 
-.unidad h3 {
-    font-size: 2.5em;
+.unidad h3 { font-size: 1.4em; }
+.unidad p { font-size: 1.05em; }
+.flecha { font-size: 2em; }
+
+/* BUSCADOR */
+.buscador {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
 }
 
-.unidad p {
-    font-size: 2em;
-}
-
-.flecha {
-    font-size: 3em;
-    color: #4fc3f7;
-}
-
-/* =======================
-   TABLAS
-======================= */
+/* TABLA */
 table {
     width: 100%;
     border-collapse: collapse;
 }
 
-th {
-    background-color: #1e1e2f;
-    color: white;
-}
-
 th, td {
     padding: 12px;
-    text-align: center;
     border-bottom: 1px solid #ddd;
-    font-size: 1.8em;
+    text-align: center;
 }
 
-/* =======================
-   BUSCADOR
-======================= */
-.buscador {
-    margin-bottom: 15px;
-    padding: 14px;
-    width: 100%;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1.8em;
+th {
+    background: #1e1e2f;
+    color: white;
+    cursor: pointer;
+    user-select: none;
 }
 
-/* =======================
-   MODAL
-======================= */
+/* MODAL */
 .modal {
     display: none;
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.6);
-    z-index: 2000;
+    z-index: 3000;
 }
 
 .modal-content {
     background: white;
-    width: 95%;
+    width: 90%;
     max-width: 900px;
     margin: 3% auto;
-    padding: 30px;
-    border-radius: 16px;
-    max-height: 94vh;
+    padding: 25px;
+    border-radius: 18px;
+    max-height: 90vh;
     overflow-y: auto;
 }
 
 .close {
     float: right;
-    font-size: 34px;
+    font-size: 28px;
     cursor: pointer;
 }
 
-/* =======================
-   DESCRIPCIÓN EVALUACIÓN
-======================= */
-#descripcionBox {
-    margin-top: 20px;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 12px;
-    font-size: 2em;
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-/* =======================
-   FOOTER
-======================= */
-footer {
-    background-color: #1e1e2f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 2em;
-}
-
-/* =======================
-   RESPONSIVE MÓVIL (DOBLE TAMAÑO)
-======================= */
+/* ==================== MÓVIL ==================== */
 @media (max-width: 600px) {
 
-    section {
-        padding: 30px 2%;
-    }
+    section { padding: 25px 3%; }
 
-    header h1 {
-        font-size: 6em;
-    }
+    header h1 { font-size: 4em; }
+    header p { font-size: 2.4em; }
 
-    header p {
-        font-size: 4em;
-    }
+    nav a { font-size: 2.4em; }
 
-    nav a {
-        font-size: 4em;
-    }
+    h2 { font-size: 3.2em; }
 
-    section h2 {
-        font-size: 4.5em;
-    }
+    .card { padding: 30px; }
 
-    .card {
-        padding: 30px 20px;
-    }
-
-    .card p {
-        font-size: 3.5em;
-    }
-
-    .unidad h3 {
-        font-size: 3.8em;
-    }
-
-    .unidad p {
-        font-size: 3.2em;
-    }
-
-    .flecha {
-        font-size: 4em;
-    }
+    .unidad h3 { font-size: 2.6em; }
+    .unidad p { font-size: 2.2em; }
+    .flecha { font-size: 3em; }
 
     .buscador {
-        font-size: 3.5em;
+        font-size: 2.4em;
         padding: 20px;
     }
 
-    /* TABLA A FORMATO VERTICAL */
+    /* TABLA COMO TARJETAS */
     table, thead, tbody, tr, td {
         display: block;
         width: 100%;
     }
 
-    thead {
-        display: none;
-    }
+    thead { display: none; }
 
     tr {
-        background: #f2f4f8;
-        margin-bottom: 20px;
+        background: #f4f6fb;
+        margin-bottom: 18px;
         padding: 20px;
-        border-radius: 16px;
+        border-radius: 18px;
     }
 
     td {
         display: flex;
         justify-content: space-between;
-        font-size: 3.2em;
+        font-size: 2.2em;
         padding: 10px 0;
     }
 
-    td:nth-child(1)::before { content: "Evaluación"; font-weight: bold; }
-    td:nth-child(2)::before { content: "Fecha"; font-weight: bold; }
-    td:nth-child(3)::before { content: "Nota"; font-weight: bold; }
-    td:nth-child(4)::before { content: "Promedio"; font-weight: bold; }
+    td:nth-child(1)::before { content: "Nº"; font-weight: bold; }
+    td:nth-child(2)::before { content: "Nombre"; font-weight: bold; }
+    td:nth-child(3)::before { content: "Promedio"; font-weight: bold; }
 
-    #descripcionBox {
-        font-size: 3.2em;
-        padding: 25px;
-        max-height: 40vh;
+    /* MODAL OPTIMIZADO EN MÓVIL */
+    .modal-content {
+        width: 98%;
+        height: 96vh;
+        margin: 2vh auto;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
     }
+
+    .modal-content h3 {
+        font-size: 3.6em;
+        margin-bottom: 15px;
+    }
+
+    .modal-content table {
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    .close {
+        font-size: 4em;
+    }
+}
+
+footer {
+    background: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 </style>
 </head>
@@ -292,8 +215,8 @@ footer {
 <body>
 
 <header>
-    <h1>Informática-101</h1>
-    <p>Profesor Jorge D. | Educación Media</p>
+    <h1>Informática 101</h1>
+    <p>Profesor Jorge D.</p>
 </header>
 
 <nav>
@@ -305,57 +228,50 @@ footer {
 <section id="inicio">
     <h2>Bienvenidos</h2>
     <div class="card">
-        <p>
-            Esta plataforma ha sido creada para acompañar el proceso de aprendizaje
-            de la asignatura <strong>Programación en C++</strong>.
-        </p>
-        <p>
-            Aquí encontrarás resúmenes teóricos, ejemplos claros y el seguimiento
-            de las calificaciones del curso.
-        </p>
+        <p>Plataforma educativa para el aprendizaje de Programación en C++.</p>
     </div>
 </section>
 
 <section id="contenidos">
-    <h2>Contenidos del Curso</h2>
+    <h2>Contenidos</h2>
 
-    <a href="unidad1.html" class="card unidad">
+    <div class="card unidad">
         <div>
             <h3>Unidad 1 – Introducción</h3>
-            <p>Algoritmos, lógica, pseudocódigo y diagramas de flujo.</p>
+            <p>Algoritmos y lógica.</p>
         </div>
         <div class="flecha">→</div>
-    </a>
+    </div>
 
-    <a href="unidad2.html" class="card unidad">
+    <div class="card unidad">
         <div>
-            <h3>Unidad 2 – Variables y Tipos de Datos</h3>
-            <p>int, float, double, char, string, entrada y salida de datos.</p>
+            <h3>Unidad 2 – Tipos de Datos</h3>
+            <p>Variables y constantes.</p>
         </div>
         <div class="flecha">→</div>
-    </a>
+    </div>
 
-    <a href="unidad3.html" class="card unidad">
+    <div class="card unidad">
         <div>
             <h3>Unidad 3 – Condicionales</h3>
-            <p>if, if-else, else if y buenas prácticas de escritura.</p>
+            <p>Estructuras if y else.</p>
         </div>
         <div class="flecha">→</div>
-    </a>
+    </div>
 </section>
 
 <section id="notas">
     <h2>Calificaciones</h2>
 
     <div class="card">
-        <input type="text" id="buscadorNombre" class="buscador" placeholder="Buscar alumno por nombre...">
+        <input type="text" id="buscadorNombre" class="buscador" placeholder="Buscar alumno...">
 
         <table id="tablaAlumnos">
             <thead>
                 <tr>
-                    <th>Nº</th>
-                    <th>Nombre</th>
-                    <th>Promedio</th>
+                    <th onclick="ordenarTabla(0)">Nº</th>
+                    <th onclick="ordenarTabla(1)">Nombre</th>
+                    <th onclick="ordenarTabla(2)">Promedio</th>
                     <th></th>
                 </tr>
             </thead>
@@ -368,35 +284,16 @@ footer {
     <div class="modal-content">
         <span class="close" onclick="cerrarModal()">✖</span>
         <h3 id="tituloAlumno"></h3>
-
         <table>
-            <thead>
-                <tr>
-                    <th>Evaluación</th>
-                    <th>Fecha</th>
-                    <th>Nota</th>
-                    <th>Promedio</th>
-                </tr>
-            </thead>
             <tbody id="detalleNotas"></tbody>
         </table>
     </div>
 </div>
 
 <footer>
-    <p>© 2026 – Curso de Programación en C++</p>
+    <p>© 2026 – Informática</p>
 </footer>
 
 <script src="notas.js"></script>
-<script>
-/* BUSCADOR (ARREGLADO, SIN TOCAR TU JS) */
-document.getElementById("buscadorNombre").addEventListener("input", function () {
-    const filtro = this.value.toLowerCase();
-    document.querySelectorAll("#tablaAlumnos tbody tr").forEach(fila => {
-        fila.style.display = fila.innerText.toLowerCase().includes(filtro) ? "" : "none";
-    });
-});
-</script>
-
 </body>
 </html>
