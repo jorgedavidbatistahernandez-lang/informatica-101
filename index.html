@@ -5,9 +5,6 @@
 <title>Informática 101</title>
 
 <style>
-/* =====================================================
-   RESET & BASE
-===================================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,259 +15,199 @@ body {
     font-family: "Segoe UI", Roboto, Arial, sans-serif;
     background: #f4f6fb;
     color: #2c2c2c;
-    line-height: 1.6;
 }
 
-/* =====================================================
-   HEADER
-===================================================== */
+/* ================= HEADER ================= */
 header {
     background: linear-gradient(135deg, #1e1e2f, #2e2e4f);
     color: #fff;
-    padding: 45px 15px;
+    padding: 40px 10px;
     text-align: center;
 }
 
-header h1 {
-    font-size: 2.8em;
-}
+header h1 { font-size: 2.6em; }
+header p { font-size: 1.3em; }
 
-header p {
-    font-size: 1.3em;
-    opacity: 0.9;
-}
-
-/* =====================================================
-   NAV
-===================================================== */
+/* ================= NAV ================= */
 nav {
-    position: sticky;
-    top: 0;
     background: #1e1e2f;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
     padding: 15px;
-    z-index: 1000;
 }
 
 nav a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: bold;
 }
 
-/* =====================================================
-   SECTIONS
-===================================================== */
+/* ================= SECTIONS ================= */
 section {
-    padding: 50px 8%;
+    padding: 40px 6%;
 }
 
-section h2 {
-    font-size: 2.2em;
-    color: #1e1e2f;
-    margin-bottom: 25px;
+h2 {
+    font-size: 2.1em;
+    margin-bottom: 20px;
 }
 
-/* =====================================================
-   CARDS
-===================================================== */
+/* ================= CARD ================= */
 .card {
-    background: #fff;
-    padding: 30px;
+    background: white;
+    padding: 25px;
     border-radius: 14px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     margin-bottom: 25px;
 }
 
-/* =====================================================
-   UNIDADES
-===================================================== */
+/* ================= UNIDADES ================= */
 .unidad {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     text-decoration: none;
     color: inherit;
 }
 
-.unidad h3 {
-    font-size: 1.5em;
-}
+.unidad h3 { font-size: 1.4em; }
+.unidad p { font-size: 1.05em; }
+.flecha { font-size: 2em; }
 
-.unidad p {
-    font-size: 1.05em;
-    opacity: 0.9;
-}
-
-.flecha {
-    font-size: 2em;
-    color: #4fc3f7;
-}
-
-/* =====================================================
-   TABLAS PC
-===================================================== */
+/* ================= TABLA ================= */
 table {
     width: 100%;
     border-collapse: collapse;
 }
 
-th {
-    background: #1e1e2f;
-    color: #fff;
-}
-
 th, td {
     padding: 12px;
-    font-size: 1em;
-    text-align: center;
     border-bottom: 1px solid #ddd;
+    text-align: center;
 }
 
-/* =====================================================
-   BUSCADOR
-===================================================== */
+th {
+    background: #1e1e2f;
+    color: white;
+}
+
+/* ================= BUSCADOR ================= */
 .buscador {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
+    font-size: 1.1em;
     margin-bottom: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: 1px solid #ccc;
-    font-size: 1em;
 }
 
-/* =====================================================
-   MODAL PC
-===================================================== */
+/* ================= MODAL ================= */
 .modal {
     display: none;
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.6);
     z-index: 3000;
-    overflow-y: auto;
 }
 
 .modal-content {
-    background: #fff;
-    width: 90%;
-    max-width: 800px;
-    margin: 4% auto;
-    padding: 30px;
-    border-radius: 16px;
-}
-
-.modal-content h3 {
-    margin-bottom: 15px;
+    background: white;
+    width: 92%;
+    max-width: 900px;
+    margin: 3% auto;
+    padding: 25px;
+    border-radius: 18px;
+    max-height: 92vh;
+    overflow-y: auto;
 }
 
 .close {
     float: right;
-    font-size: 26px;
+    font-size: 28px;
     cursor: pointer;
 }
 
-/* =====================================================
-   FOOTER
-===================================================== */
-footer {
-    background: #1e1e2f;
-    color: #fff;
-    text-align: center;
+/* ================= DESCRIPCION ================= */
+#descripcionBox {
+    margin-top: 20px;
     padding: 20px;
+    background: #fff3cd;
+    border-radius: 14px;
+    font-size: 1.2em;
+    max-height: 320px;
+    overflow-y: auto;
 }
 
-/* =====================================================
-   MOBILE – OPTIMIZADO EDUCATIVO
-===================================================== */
+/* ================= MOBILE ================= */
 @media (max-width: 600px) {
 
-    header h1 { font-size: 3.6em; }
-    header p { font-size: 2.1em; }
+    section { padding: 25px 3%; }
 
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
+    header h1 { font-size: 3.8em; }
+    header p { font-size: 2.2em; }
 
-    nav a {
-        font-size: 2.2em;
-    }
+    nav a { font-size: 2.2em; }
 
-    section {
-        padding: 30px 5%;
-    }
+    h2 { font-size: 3.1em; }
 
-    section h2 {
-        font-size: 3em;
-    }
+    .card { padding: 30px; }
 
-    .card {
-        padding: 30px;
-    }
-
-    .card p {
-        font-size: 2em;
+    .card p,
+    .unidad p {
+        font-size: 2.1em;
     }
 
     .unidad h3 {
-        font-size: 2.4em;
+        font-size: 2.5em;
     }
 
-    .unidad p {
-        font-size: 1.9em;
+    .flecha { font-size: 3em; }
+
+    .buscador {
+        font-size: 2.2em;
+        padding: 20px;
     }
 
-    .flecha {
-        font-size: 3em;
-    }
-
-    /* TABLA → CARDS */
-    .modal-content table,
-    .modal-content thead,
-    .modal-content tbody,
-    .modal-content tr,
-    .modal-content td {
+    /* TABLA A CARDS */
+    table, thead, tbody, tr, td {
         display: block;
         width: 100%;
     }
 
-    .modal-content thead {
-        display: none;
-    }
+    thead { display: none; }
 
-    .modal-content tr {
+    tr {
         background: #f4f6fb;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
         padding: 20px;
-        border-radius: 16px;
+        border-radius: 18px;
     }
 
-    .modal-content td {
+    td {
         display: flex;
         justify-content: space-between;
-        font-size: 2em;
-        padding: 8px 0;
+        font-size: 2.1em;
+        padding: 10px 0;
     }
 
-    .modal-content td::before {
-        font-weight: bold;
-    }
+    td::before { font-weight: bold; }
 
-    .modal-content td:nth-of-type(1)::before { content: "Evaluación"; }
-    .modal-content td:nth-of-type(2)::before { content: "Fecha"; }
-    .modal-content td:nth-of-type(3)::before { content: "Nota"; }
-    .modal-content td:nth-of-type(4)::before { content: "Promedio"; }
+    td:nth-child(1)::before { content: "Evaluación"; }
+    td:nth-child(2)::before { content: "Fecha"; }
+    td:nth-child(3)::before { content: "Nota"; }
+    td:nth-child(4)::before { content: "Promedio"; }
 
-    .descripcion-collapse {
-        margin-top: 15px;
-        padding: 15px;
-        background: #fff3cd;
-        border-radius: 12px;
-        font-size: 1.9em;
+    #descripcionBox {
+        font-size: 2.1em;
+        padding: 25px;
     }
+}
+
+footer {
+    background: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 </style>
 </head>
@@ -279,7 +216,7 @@ footer {
 
 <header>
     <h1>Informática 101</h1>
-    <p>Profesor Jorge D. | Educación Media</p>
+    <p>Profesor Jorge D.</p>
 </header>
 
 <nav>
@@ -291,80 +228,74 @@ footer {
 <section id="inicio">
     <h2>Bienvenidos</h2>
     <div class="card">
-        <p>Esta plataforma acompaña el aprendizaje de Programación en C++.</p>
-        <p>Incluye contenidos teóricos, ejercicios prácticos y seguimiento académico.</p>
+        <p>Plataforma educativa para el aprendizaje de Programación en C++.</p>
     </div>
 </section>
 
 <section id="contenidos">
-    <h2>Contenidos del Curso</h2>
+    <h2>Contenidos</h2>
 
-    <a href="unidad1.html" class="card unidad">
+    <a class="card unidad">
         <div>
-            <h3>Unidad 1 – Introducción a la Programación</h3>
-            <p>Algoritmos, pensamiento lógico y diagramas de flujo.</p>
+            <h3>Unidad 1 – Introducción</h3>
+            <p>Algoritmos y lógica.</p>
         </div>
         <div class="flecha">→</div>
     </a>
 
-    <a href="unidad2.html" class="card unidad">
+    <a class="card unidad">
         <div>
-            <h3>Unidad 2 – Variables y Tipos de Datos</h3>
-            <p>Tipos primitivos, declaración de variables y constantes.</p>
+            <h3>Unidad 2 – Tipos de Datos</h3>
+            <p>Variables y constantes.</p>
         </div>
         <div class="flecha">→</div>
     </a>
 
-    <a href="unidad3.html" class="card unidad">
+    <a class="card unidad">
         <div>
-            <h3>Unidad 3 – Estructuras Condicionales</h3>
-            <p>Uso de if, else, operadores lógicos y toma de decisiones.</p>
+            <h3>Unidad 3 – Condicionales</h3>
+            <p>Estructuras if y else.</p>
         </div>
         <div class="flecha">→</div>
     </a>
-
 </section>
 
 <section id="notas">
-<h2>Calificaciones</h2>
-<div class="card">
-<input type="text" id="buscadorNombre" class="buscador" placeholder="Buscar alumno...">
-<table id="tablaAlumnos">
-<thead>
-<tr>
-<th>Nº</th>
-<th>Nombre</th>
-<th>Promedio</th>
-<th></th>
-</tr>
-</thead>
-<tbody></tbody>
-</table>
-</div>
+    <h2>Calificaciones</h2>
+    <div class="card">
+        <input type="text" id="buscadorNombre" class="buscador" placeholder="Buscar alumno...">
+        <table id="tablaAlumnos">
+            <thead>
+                <tr><th>#</th><th>Nombre</th><th>Promedio</th><th></th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 </section>
 
 <div class="modal" id="modal">
-<div class="modal-content">
-<span class="close" onclick="cerrarModal()">✖</span>
-<h3 id="tituloAlumno"></h3>
-<table>
-<thead>
-<tr>
-<th>Evaluación</th>
-<th>Fecha</th>
-<th>Nota</th>
-<th>Promedio</th>
-</tr>
-</thead>
-<tbody id="detalleNotas"></tbody>
-</table>
-</div>
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">✖</span>
+        <h3 id="tituloAlumno"></h3>
+        <table>
+            <tbody id="detalleNotas"></tbody>
+        </table>
+    </div>
 </div>
 
 <footer>
-    <p>© 2026 – Curso de Programación en C++</p>
+    <p>© 2026 – Informática</p>
 </footer>
 
-<script src="notas.js"></script>
+<script>
+/* ================= BUSCADOR FUNCIONAL ================= */
+document.getElementById("buscadorNombre").addEventListener("input", function () {
+    const texto = this.value.toLowerCase();
+    document.querySelectorAll("#tablaAlumnos tbody tr").forEach(tr => {
+        tr.style.display = tr.innerText.toLowerCase().includes(texto) ? "" : "none";
+    });
+});
+</script>
+
 </body>
 </html>
