@@ -2,97 +2,136 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Informática-101</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-
-body{
-    font-family:'Segoe UI',Arial,sans-serif;
-    background:#f2f4f8;
-    color:#333
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
+body{
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:#f2f4f8;
+    color:#333;
+}
+
+/* HEADER */
 header{
     background:linear-gradient(135deg,#1e1e2f,#34345a);
     color:white;
     padding:50px 10px;
-    text-align:center
+    text-align:center;
 }
-header h1{font-size:4em}
-header p{font-size:3em}
 
+header h1{font-size:4em;}
+header p{font-size:2.5em;margin-top:10px;}
+
+/* NAV */
 nav{
     position:sticky;
     top:0;
     background:#1e1e2f;
     display:flex;
     justify-content:center;
-    gap:25px;
+    gap:30px;
     padding:20px;
     z-index:1000;
-    flex-wrap:wrap
+    flex-wrap:wrap;
 }
+
 nav a{
     color:white;
     text-decoration:none;
-    font-size:2.5em;
-    font-weight:600
+    font-size:2.2em;
+    font-weight:600;
 }
 
-section{padding:50px 5%}
-section h2{font-size:3em;margin-bottom:25px;color:#1e1e2f}
+/* SECCIONES */
+section{
+    padding:50px 5%;
+}
 
+section h2{
+    font-size:3em;
+    color:#1e1e2f;
+    margin-bottom:30px;
+}
+
+/* CARD */
 .card{
     background:white;
-    padding:40px 25px;
-    border-radius:14px;
+    padding:35px;
+    border-radius:16px;
     box-shadow:0 8px 25px rgba(0,0,0,.15);
-    margin-bottom:25px
+    margin-bottom:25px;
 }
-.card p{font-size:2em}
 
+.card p{
+    font-size:2em;
+    margin-bottom:15px;
+}
+
+/* UNIDADES */
 .unidad{
     display:flex;
     justify-content:space-between;
     align-items:center;
     text-decoration:none;
     color:inherit;
-    flex-wrap:wrap
+    flex-wrap:wrap;
 }
-.unidad h3{font-size:2.5em}
-.unidad p{font-size:2em}
-.flecha{font-size:3em;color:#4fc3f7}
 
-table{width:100%;border-collapse:collapse}
-th,td{
-    padding:14px;
-    border-bottom:1px solid #ddd;
-    text-align:center;
-    font-size:1.8em
+.unidad h3{font-size:2.5em;}
+.unidad p{font-size:2em;}
+
+.flecha{
+    font-size:3em;
+    color:#4fc3f7;
 }
+
+/* TABLA */
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
 th{
     background:#1e1e2f;
     color:white;
-    cursor:pointer
+    padding:14px;
+    font-size:1.8em;
+    cursor:pointer;
 }
 
+td{
+    padding:12px;
+    text-align:center;
+    font-size:1.8em;
+    border-bottom:1px solid #ddd;
+}
+
+/* BUSCADOR */
 .buscador{
     width:100%;
     padding:16px;
+    font-size:1.8em;
     margin-bottom:20px;
-    font-size:2em;
     border-radius:10px;
-    border:1px solid #ccc
+    border:1px solid #ccc;
 }
 
+/* MODAL */
 .modal{
     display:none;
     position:fixed;
     inset:0;
     background:rgba(0,0,0,.6);
-    z-index:2000
+    z-index:2000;
 }
+
 .modal-content{
     background:white;
     width:95%;
@@ -101,43 +140,57 @@ th{
     padding:30px;
     border-radius:18px;
     max-height:94vh;
-    overflow-y:auto
-}
-.close{
-    float:right;
-    font-size:36px;
-    cursor:pointer
+    overflow-y:auto;
 }
 
+.close{
+    font-size:34px;
+    cursor:pointer;
+    float:right;
+}
+
+/* FOOTER */
 footer{
     background:#1e1e2f;
     color:white;
     text-align:center;
     padding:20px;
-    font-size:2em
+    font-size:2em;
 }
 
-/* MÓVIL */
+/* =========================
+   MÓVIL
+========================= */
 @media(max-width:600px){
-    thead{display:none}
-    tbody tr{
-        display:block;
-        background:white;
-        margin-bottom:25px;
-        padding:25px;
-        border-radius:18px;
-        box-shadow:0 6px 18px rgba(0,0,0,.12)
-    }
-    tbody td{
-        display:flex;
-        justify-content:space-between;
-        font-size:3.2em;
-        padding:10px 0;
-        border:none
-    }
-    tbody td:nth-child(1)::before{content:"Nº"}
-    tbody td:nth-child(2)::before{content:"Nombre"}
-    tbody td:nth-child(3)::before{content:"Promedio"}
+
+header h1{font-size:3em;}
+header p{font-size:2em;}
+
+nav a{font-size:2em;}
+
+tbody tr{
+    display:block;
+    background:white;
+    margin-bottom:25px;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
+}
+
+thead{display:none;}
+
+tbody td{
+    display:flex;
+    justify-content:space-between;
+    font-size:3em;
+    border:none;
+    padding:10px 0;
+}
+
+tbody td:nth-child(1)::before{content:"Nº";font-weight:bold;}
+tbody td:nth-child(2)::before{content:"Nombre";font-weight:bold;}
+tbody td:nth-child(3)::before{content:"Promedio";font-weight:bold;}
+
 }
 </style>
 </head>
@@ -146,7 +199,7 @@ footer{
 
 <header>
     <h1>Informática-101</h1>
-    <p>Profesor Jorge D.</p>
+    <p>Profesor Jorge D. | Educación Media</p>
 </header>
 
 <nav>
@@ -156,42 +209,99 @@ footer{
 </nav>
 
 <section id="inicio">
-<div class="card">
-<p>Curso de Programación en C++ – seguimiento académico.</p>
-</div>
+    <h2>Bienvenidos</h2>
+    <div class="card">
+        <p>
+            Esta plataforma ha sido creada para acompañar el proceso de aprendizaje
+            de la asignatura <strong>Programación en C++</strong>.
+        </p>
+        <p>
+            Aquí encontrarás resúmenes teóricos, ejemplos claros y el seguimiento
+            de las calificaciones del curso.
+        </p>
+    </div>
 </section>
 
 <section id="contenidos">
-<a class="card unidad"><div><h3>Unidad 1</h3><p>Introducción</p></div><div class="flecha">→</div></a>
-<a class="card unidad"><div><h3>Unidad 2</h3><p>Tipos de Datos</p></div><div class="flecha">→</div></a>
-<a class="card unidad"><div><h3>Unidad 3</h3><p>Condicionales</p></div><div class="flecha">→</div></a>
+    <h2>Contenidos del Curso</h2>
+
+    <a href="unidad1.html" class="card unidad">
+        <div>
+            <h3>Unidad 1 – Introducción</h3>
+            <p>Algoritmos, lógica, pseudocódigo y diagramas de flujo.</p>
+        </div>
+        <div class="flecha">→</div>
+    </a>
+
+    <a href="unidad2.html" class="card unidad">
+        <div>
+            <h3>Unidad 2 – Variables y Tipos de Datos</h3>
+            <p>int, float, double, char, string, entrada y salida.</p>
+        </div>
+        <div class="flecha">→</div>
+    </a>
+
+    <a href="unidad3.html" class="card unidad">
+        <div>
+            <h3>Unidad 3 – Condicionales</h3>
+            <p>if, if-else, else if y validaciones.</p>
+        </div>
+        <div class="flecha">→</div>
+    </a>
 </section>
 
 <section id="notas">
-<div class="card">
-<input id="buscadorNombre" class="buscador" placeholder="Buscar alumno">
-<table id="tablaAlumnos">
-<thead>
-<tr><th>Nº</th><th>Nombre</th><th>Promedio</th><th></th></tr>
-</thead>
-<tbody></tbody>
-</table>
-</div>
+    <h2>Calificaciones</h2>
+
+    <div class="card">
+        <input
+            type="text"
+            id="buscadorNombre"
+            class="buscador"
+            placeholder="Buscar alumno por nombre..."
+        >
+
+        <table id="tablaAlumnos">
+            <thead>
+                <tr>
+                    <th>Nº</th>
+                    <th>Nombre</th>
+                    <th>Promedio</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- JS carga TODO aquí -->
+            </tbody>
+        </table>
+    </div>
 </section>
 
 <div class="modal" id="modal">
-<div class="modal-content">
-<span class="close" onclick="cerrarModal()">✖</span>
-<h3 id="tituloAlumno"></h3>
-<table>
-<thead><tr><th>Evaluación</th><th>Fecha</th><th>Nota</th><th>Promedio</th></tr></thead>
-<tbody id="detalleNotas"></tbody>
-</table>
-</div>
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">✖</span>
+        <h3 id="tituloAlumno"></h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Evaluación</th>
+                    <th>Fecha</th>
+                    <th>Nota</th>
+                    <th>Promedio</th>
+                </tr>
+            </thead>
+            <tbody id="detalleNotas"></tbody>
+        </table>
+    </div>
 </div>
 
-<footer>© 2026 – Informática</footer>
+<footer>
+    <p>© 2026 – Curso de Programación en C++</p>
+</footer>
 
+<!-- JS REAL -->
 <script src="notas.js"></script>
+
 </body>
 </html>
