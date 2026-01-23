@@ -229,3 +229,65 @@ function mostrarDescripcion(texto) {
 function cerrarModal() {
     document.getElementById("modal").style.display = "none";
 }
+
+
+
+/*************************
+ * ORDENAR TABLA
+ *************************/
+ let ordenActual = {
+    numero: true,
+    nombre: true,
+    promedio: true
+};
+
+function ordenarTabla(tipo) {
+
+    alumnos.sort((a, b) => {
+
+        let valA, valB;
+
+        if (tipo === "numero") {
+            valA = a.numero;
+            valB = b.numero;
+        }
+
+        if (tipo === "nombre") {
+            valA = a.nombre.toLowerCase();
+            valB = b.nombre.toLowerCase();
+        }
+
+        if (tipo === "promedio") {
+            valA = calcularPromedio(a) === "—" ? -1 : parseFloat(calcularPromedio(a));
+            valB = calcularPromedio(b) === "—" ? -1 : parseFloat(calcularPromedio(b));
+        }
+
+        if (valA < valB) return ordenActual[tipo] ? -1 : 1;
+        if (valA > valB) return ordenActual[tipo] ? 1 : -1;
+        return 0;
+    });
+
+    ordenActual[tipo] = !ordenActual[tipo];
+
+    renderizarTabla();
+}
+
+/*************************
+ * REDIBUJAR TABLA
+ *************************/
+function renderizarTabla() {
+    const tbody = document.querySelector("#tablaAlumnos tbody");
+    tbody.innerHTML = "";
+
+    alumnos.forEach(al => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>${al.numero}</td>
+            <td>${al.nombre}</td>
+            <td>${calcularPromedio(al)}</td>
+            <td></td>
+        `;
+        tr.addEventListener("click", () => abrirModal(al));
+        tbody.appendChild(tr);
+    });
+}
