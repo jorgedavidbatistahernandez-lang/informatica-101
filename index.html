@@ -22,6 +22,7 @@ body {
     background-color: #f2f4f8;
     color: #333;
     line-height: 1.5;
+    font-size: 12px; 
 }
 
 /* =======================
@@ -206,6 +207,10 @@ footer {
 ======================= */
 @media (max-width: 600px) {
 
+    body {
+        font-size: 20px; /* MÓVIL */
+    }
+
     section {
         padding: 30px 2%;
     }
@@ -292,7 +297,7 @@ footer {
 <body>
 
 <header>
-    <h1>Informática-101</h1>
+    <h1>Informática-101 </h1>
     <p>Profesor Jorge D. | Educación Media</p>
 </header>
 
@@ -353,12 +358,13 @@ footer {
         <table id="tablaAlumnos">
             <thead>
                 <tr>
-                    <th>Nº</th>
-                    <th>Nombre</th>
-                    <th>Promedio</th>
+                    <th onclick="ordenarTabla('numero')" style="cursor:pointer">Nº</th>
+                    <th onclick="ordenarTabla('nombre')" style="cursor:pointer">Nombre</th>
+                    <th onclick="ordenarTabla('promedio')" style="cursor:pointer">Promedio</th>
                     <th></th>
                 </tr>
             </thead>
+            
             <tbody></tbody>
         </table>
     </div>
