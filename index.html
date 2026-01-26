@@ -205,10 +205,10 @@ footer {
 /* =======================
    RESPONSIVE MÓVIL (DOBLE TAMAÑO)
 ======================= */
-@media (max-width: 400px) {
+@media (max-width: 600px) {
 
     body {
-        font-size: 50px; /* MÓVIL */
+        font-size: 20px; /* MÓVIL */
     }
 
     section {
@@ -291,6 +291,53 @@ footer {
         max-height: 40vh;
     }
 }
+
+.buscador-con-boton {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.buscador-con-boton .buscador {
+    flex: 1;
+}
+
+.btn-evaluaciones {
+    padding: 15px 20px;
+    font-size: 1.9em;
+    border-radius: 10px;
+    border: none;
+    background-color: #1e1e2f;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+margin-top: -14px;
+
+
+    display: flex;                 
+    align-items: center;         
+    justify-content: center;
+    gap: 6px;                     
+
+    line-height: 1;              
+}
+
+
+.btn-evaluaciones::after {
+    content: " ➜";
+    font-size: 1.2em;
+    margin-left: 6px;
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.btn-evaluaciones:hover::after {
+    transform: translateX(4px);
+}
+
+
+
+
 </style>
 </head>
 
@@ -305,6 +352,7 @@ footer {
     <a href="#inicio">Inicio</a>
     <a href="#contenidos">Contenidos</a>
     <a href="#notas">Notas</a>
+    <a href="evaluaciones.html">Evaluaciones </a>
 </nav>
 
 <section id="inicio">
@@ -353,7 +401,11 @@ footer {
     <h2>Calificaciones</h2>
 
     <div class="card">
-        <input type="text" id="buscadorNombre" class="buscador" placeholder="Buscar alumno por nombre...">
+        <div class="buscador-con-boton">
+            <input type="text" id="buscadorNombre" class="buscador" placeholder="Buscar alumno por nombre...">
+            <button class="btn-evaluaciones" onclick="abrirEvaluaciones()">Evaluaciones</button>
+        </div>
+        
 
         <table id="tablaAlumnos">
             <thead>
@@ -406,6 +458,3 @@ document.getElementById("buscadorNombre").addEventListener("input", function () 
 
 </body>
 </html>
-
-
-
