@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Evaluaciones – Informática 101</title>
+
+<style>
+/* =======================
+   ESTILOS GENERALES
+======================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f2f4f8;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =======================
+   HEADER
+======================= */
+header {
+    background: linear-gradient(135deg, #1e1e2f, #34345a);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    animation: fadeInDown 1s ease;
+}
+
+header h1 {
+    font-size: 2.8em;
+}
+
+/* =======================
+   NAV
+======================= */
+nav {
+    background-color: #1e1e2f;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #1e1e2f;
+    z-index: 1000;
+}
+#pregunta1,
+#pregunta2 {
+    scroll-margin-top: 120px;
+}
+
+@media (max-width: 600px) {
+    #pregunta1,
+    #pregunta2 {
+        scroll-margin-top: 180px;
+    }
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* =======================
+   MAIN
+======================= */
+main {
+    flex: 1;
+    padding: 50px 10%;
+}
+
+/* =======================
+   CARD EVALUACIÓN
+======================= */
+.evaluacion {
+    background: white;
+    border-radius: 14px;
+    padding: 35px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    animation: fadeUp 0.7s ease;
+}
+
+.evaluacion h2 {
+    color: #1e1e2f;
+    margin-bottom: 10px;
+}
+
+.fecha {
+    display: inline-block;
+    background: #1e1e2f;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.95em;
+    margin-bottom: 20px;
+}
+
+/* =======================
+   CONTENIDO
+======================= */
+.evaluacion p,
+.evaluacion li {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.evaluacion ul {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.linea {
+    font-family: monospace;
+    letter-spacing: 2px;
+}
+
+.evaluacion:nth-of-type(2) ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.tabla-enlazar {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.1em;
+}
+
+.tabla-enlazar th {
+    text-align: left;
+    padding: 10px;
+    background: #f2f4f8;
+    color: #1e1e2f;
+    font-weight: bold;
+}
+
+.tabla-enlazar td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.tabla-enlazar .linea {
+    font-family: monospace;
+    letter-spacing: 2px;
+    text-align: center;
+    min-width: 120px;
+}
+
+
+/* =======================
+   ANIMACIONES
+======================= */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =======================
+   MÓVIL
+======================= */
+@media (max-width: 600px) {
+    body { font-size: 20px; }
+    main { padding: 30px 5%; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Evaluaciones del Curso</h1>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="#pregunta1">Pregunta 1</a>
+    <a href="#pregunta2">Pregunta 2</a>
+</nav>
+
+<main>
+
+<!-- =======================
+   EVALUACIÓN 1
+======================= -->
+<div class="evaluacion">
+    <h2 id="pregunta1" >Tipos de Datos</h2>
+    <span class="fecha">19/11/2025</span>
+
+    <p><b>Enlaza según corresponda:</b></p>
+
+<table class="tabla-enlazar">
+    
+    <tbody>
+        <tr>
+            <td><b>Int</b></td>
+            <td class="linea"></td>
+            <td>Almacena: Un solo carácter (A; 1; = ; #)</td>
+        </tr>
+        <tr>
+            <td><b>Char</b></td>
+            <td class="linea"></td>
+            <td>Almacena: Números con decimales (1.2; 0.5; 1/2)</td>
+        </tr>
+        <tr>
+            <td><b>String</b></td>
+            <td class="linea"></td>
+            <td>Almacena: Números enteros (0; -1; 37)</td>
+        </tr>
+        <tr>
+            <td><b>Double</b></td>
+            <td class="linea"></td>
+            <td>Almacena: Cadena de caracteres (“Pedro77”)</td>
+        </tr>
+        <tr>
+            <td><b>Float</b></td>
+            <td class="linea"></td>
+            <td>Almacena: Valores lógicos (0; 1)</td>
+        </tr>
+        <tr>
+            <td><b>Bool</b></td>
+            <td class="linea"></td>
+            <td>Almacena: Valores vacíos</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+    <p><b>Completa según corresponda:</b></p>
+
+    <p class="linea">
+        Cout __ “¿Cuál es tu nombre?” _<br><br>
+        Cin >> ___ ;
+    </p>
+
+    <p>
+        <b>¿Qué es una variable?</b><br>
+        ____________________________________________<br>
+        ____________________________________________
+    </p>
+</div>
+
+<!-- =======================
+   EVALUACIÓN 2
+======================= -->
+<div class="evaluacion">
+    <h2 id="pregunta2">Sentencias Condicionales</h2>
+    <span class="fecha">10/12/2025</span>
+
+    <p><b>Verdadero o Falso: </b></p>
+
+    <ul>
+        <li>a) ___ Una variable de tipo bool solo puede almacenar los valores 0 y 1.</li>
+        <li>b) ___ La declaración float Precio = 10.99; es correcta en C++</li>
+        <li>c) ___ La declaración String CI = 102839.000 ; no es correcta en C++</li>
+        <li>d) ___ El operador == se usa para asignar valores a variables</li>
+        <li>e) ___ La condición de un if siempre debe estar entre paréntesis</li>
+        <li>f) ___ cin >> edad; lee un valor y lo almacena en la variable edad</li>
+        <li>g) ___ #include &lt;iostream.h&gt; permite usar cout y cin</li>
+        <li>h) ___ Los nombres de variables son sensibles a mayúsculas y minúsculas</li>
+        <li>i) ___ (5 &gt; 3) && (4 &lt; 2) evalúa a Verdadero ?</li>
+    </ul>
+    
+    <p><b>Ejercicio 2: Crea un programa que:</b></p>
+    
+    
+    <ul>
+        <li>1. Pida año de nacimiento</li>
+        <li>2. Pida año actual</li>
+        <li>3. Calcule edad</li>
+        <li><b> Clasifique por generación:</b></li>
+        <li>- 0-12: Niño</li>
+        <li>- 13-17: Adolescente</li>
+        <li>- 18-35: Joven</li>
+        <li>- 36-59: Adulto</li>
+        <li>- 60+: Adulto mayor</li>
+    </ul>
+    
+</div>
+
+</main>
+
+<footer>
+    <p>© 2026 – Curso de Programación en C++</p>
+</footer>
+
+</body>
+</html>
